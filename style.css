@@ -63,6 +63,7 @@ header .localisation__ville, header .localisation i {
 
 .fonctionnement {
   padding: 30px 20px;
+  padding-bottom: 50px;
 }
 .fonctionnement__titre {
   font-size: 22px;
@@ -97,6 +98,76 @@ header .localisation__ville, header .localisation i {
 }
 .fonctionnement__rubrique .fonctionnement__details .IconeStore {
   color: #9356DC;
+}
+
+.restaurant {
+  background-color: #f8f6f6;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.restaurant__titre {
+  font-size: 22px;
+  padding-left: 20px;
+}
+.restaurant__card {
+  margin: 20px;
+  height: 230px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: #d4d1d1 3px 4px 9px 2px;
+}
+.restaurant__card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.restaurant__card .restaurant__description {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  padding-right: 20px;
+}
+.restaurant__card .restaurant__description .restaurant__details .restaurant__nom {
+  margin: 0;
+  font-weight: bold;
+}
+.restaurant__card .restaurant__description .restaurant__details .restaurant__ville {
+  margin-top: 5px;
+  font-size: 16px;
+}
+.restaurant__card .restaurant__description i {
+  font-size: 23px;
+  color: #525050;
+}
+
+footer {
+  padding: 20px;
+  font-size: 15px;
+  background-color: #3b3a3a;
+  color: white;
+}
+footer .footer__titre {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  margin: 0;
+}
+footer .bloc {
+  display: flex;
+  margin: 10px 0;
+}
+footer .bloc .Icone1 {
+  margin-right: 13px;
+}
+footer .bloc .Icone2 {
+  margin-right: 8px;
+}
+footer .bloc p {
+  margin: 0;
+}
+footer .mention, footer .contact {
+  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
