@@ -11,40 +11,46 @@ header {
 }
 header .logo img {
   width: 160px;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
-header .localisation__ville {
+header .localisation {
+  display: flex;
+  padding: 0 110px;
+  justify-content: space-around;
+  background-color: #ece9e9;
+  border-top: solid #d4d1d1;
+}
+header .localisation__ville, header .localisation i {
   font-size: 15px;
   font-weight: bold;
   color: #525050;
   margin: 0;
-  padding: 15px;
-  background-color: #ece9e9;
-  border-top: solid #d4d1d1;
+  padding: 15px 0px;
 }
 
-.section1 {
+.presentation {
   background-color: #f8f6f6;
+  padding-bottom: 30px;
 }
-.section1__titre {
+.presentation__titre {
   margin: 0;
   text-align: center;
   font-size: 22px;
-  margin: 30px 60px;
-  margin-bottom: 10px;
+  padding: 40px 60px;
+  padding-bottom: 10px;
 }
-.section1__description {
+.presentation__description {
   text-align: center;
   font-size: 17px;
   color: #525050;
   margin: 0;
 }
-.section1__bouton {
+.presentation__bouton {
   text-align: center;
   margin: 30px;
 }
-.section1__bouton button {
+.presentation__bouton button {
   height: 50px;
   padding: 0 20px;
   background: linear-gradient(-5deg, #9356DC 0%, #FF79DA 100%);
@@ -53,6 +59,44 @@ header .localisation__ville {
   font-family: "Roboto", sans-serif;
   border-radius: 30px;
   border: none;
+}
+
+.fonctionnement {
+  padding: 30px 20px;
+}
+.fonctionnement__titre {
+  font-size: 22px;
+}
+.fonctionnement__rubrique {
+  display: flex;
+  margin: 20px 0;
+}
+.fonctionnement__rubrique .fonctionnement__numero {
+  margin: 20px 0;
+  padding: 4px 7px;
+  font-size: 13px;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  position: absolute;
+}
+.fonctionnement__rubrique .fonctionnement__details {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 20px;
+  margin-left: 10px;
+  background-color: #f8f6f6;
+  box-shadow: #d4d1d1 3px 4px 9px 2px;
+  font-weight: bold;
+}
+.fonctionnement__rubrique .fonctionnement__details i {
+  padding: 0 30px;
+  font-size: 20px;
+  color: #525050;
+}
+.fonctionnement__rubrique .fonctionnement__details .IconeStore {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */

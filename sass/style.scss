@@ -23,31 +23,36 @@ header{
     .logo {
         img {
             width: 160px; 
-            margin-top: 25px; 
+            margin-top: 20px; 
             margin-bottom: 10px;
         } 
     }
     .localisation {
-        &__ville {
+        display: flex;
+        padding: 0 110px;
+        justify-content: space-around;
+        background-color: $color-grey1;
+        border-top: solid $color-grey2;
+        &__ville , i {
             font-size: 15px;
             font-weight: bold;
             color: $color-grey4;
             margin: 0;
-            padding: 15px;
-            background-color: $color-grey1;
-            border-top: solid $color-grey2;
+            padding: 15px 0px;
+
         }
     }
 }
 
-.section1 {
+.presentation {
     background-color: $color-grey3 ;
+    padding-bottom: 30px;
     &__titre {
         margin: 0;
         text-align: center;
         font-size: 22px;
-        margin: 30px 60px;
-        margin-bottom: 10px;
+        padding: 40px 60px; 
+        padding-bottom: 10px;
     }
     &__description {
         text-align: center;
@@ -67,6 +72,44 @@ header{
             font-family: $font-secondary;
             border-radius: 30px;
             border: none;
+        }
+    }
+}
+
+.fonctionnement {
+    padding: 30px 20px;
+    &__titre {
+        font-size: 22px; 
+    }
+    &__rubrique {
+        display: flex; 
+        margin: 20px 0;
+        .fonctionnement__numero {
+            margin: 20px 0;
+            padding: 4px 7px;
+            font-size: 13px;
+            color: white;
+            background-color: $color-primary;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .fonctionnement__details {
+            display: flex;
+            width: 100%;
+            padding: 20px 0;
+            border-radius: 20px;
+            margin-left: 10px;
+            background-color: $color-grey3 ;
+            box-shadow: $color-grey2 3px 4px 9px 2px;
+            font-weight: bold;
+            i {
+                padding: 0 30px;
+                font-size: 20px;
+                color: $color-grey4;
+            }
+            .IconeStore {
+                color: $color-primary;
+            }
         }
     }
 }
