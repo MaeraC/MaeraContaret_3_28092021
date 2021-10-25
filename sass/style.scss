@@ -1,3 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+/* font-family: 'Roboto', sans-serif; Textes 
+   font-family: 'Shrikhand', cursive; Logo et titres */
+
+$font-primary : 'Shrikhand', cursive ;
+$font-secondary : 'Roboto' , sans-serif ;
+$color-primary : #9356DC ;
+$color-secondary : #FF79DA ;
+$color-tiertiary : #99E2D0 ;
+$color-grey1 : rgb(236, 233, 233) ;
+$color-grey2 : rgb(212, 209, 209) ;
+$color-grey3 : rgb(248, 246, 246) ;
+$color-grey4 : rgb(82, 80, 80) ;
+
+
+body {
+    font-family: $font-secondary;
+    margin: 0;
+}   
+
 header{
     text-align: center;
+    .logo {
+        img {
+            width: 160px; 
+            margin-top: 25px; 
+            margin-bottom: 10px;
+        } 
+    }
+    .localisation {
+        &__ville {
+            font-size: 15px;
+            font-weight: bold;
+            color: $color-grey4;
+            margin: 0;
+            padding: 15px;
+            background-color: $color-grey1;
+            border-top: solid $color-grey2;
+        }
+    }
+}
+
+.section1 {
+    background-color: $color-grey3 ;
+    &__titre {
+        margin: 0;
+        text-align: center;
+        font-size: 22px;
+        margin: 30px 60px;
+        margin-bottom: 10px;
+    }
+    &__description {
+        text-align: center;
+        font-size: 17px;
+        color: $color-grey4 ;
+        margin: 0;
+    }
+    &__bouton {
+        text-align: center;
+        margin: 30px;
+        button {
+            height: 50px; 
+            padding: 0 20px;
+            background: linear-gradient(-5deg, $color-primary 0%, $color-secondary 100%);
+            color: white;
+            font-size: 15px;
+            font-family: $font-secondary;
+            border-radius: 30px;
+            border: none;
+        }
+    }
 }
