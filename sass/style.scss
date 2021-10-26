@@ -12,7 +12,7 @@ $color-grey2 : rgb(212, 209, 209) ;
 $color-grey3 : rgb(248, 246, 246) ;
 $color-grey4 : rgb(82, 80, 80) ;
 $color-grey5 : rgb(59, 58, 58) ;
-
+$background : linear-gradient(-5deg, $color-primary 0%, $color-secondary 100%);
 
 body {
     font-family: $font-secondary;
@@ -57,7 +57,7 @@ header{
     }
     &__description {
         text-align: center;
-        font-size: 17px;
+        font-size: 18px;
         color: $color-grey4 ;
         margin: 0;
     }
@@ -68,11 +68,18 @@ header{
             height: 50px; 
             padding: 0 20px;
             background: linear-gradient(-5deg, $color-primary 0%, $color-secondary 100%);
+            box-shadow: $color-grey2 1px 3px 6px 3px ; 
             color: white;
             font-size: 15px;
             font-family: $font-secondary;
             border-radius: 30px;
             border: none;
+            transition: 0.5s;
+        }
+        :hover {
+            background: linear-gradient(-5deg, lighten($color-primary, 5%) 0%, lighten($color-secondary, 5%) 100%);
+            box-shadow: $color-grey4 1px 3px 6px 1px ; 
+            cursor: pointer;
         }
     }
 }
@@ -86,7 +93,7 @@ header{
     &__rubrique {
         display: flex; 
         margin: 20px 0;
-        .fonctionnement__numero {
+        &__numero {
             margin: 20px 0;
             padding: 4px 7px;
             font-size: 13px;
@@ -95,7 +102,7 @@ header{
             border-radius: 50%;
             position: absolute;
         }
-        .fonctionnement__details {
+        &__details {
             display: flex;
             width: 100%;
             padding: 20px 0;
@@ -106,7 +113,7 @@ header{
             font-weight: bold;
             i {
                 padding: 0 30px;
-                font-size: 20px;
+                font-size: 22px;
                 color: $color-grey4;
             }
             .IconeStore {
@@ -124,7 +131,7 @@ header{
         font-size: 22px;
         padding-left: 20px;
     }
-    &__card {
+    .card {
         margin: 20px;
         height: 230px ;
         border-radius: 15px;
@@ -137,23 +144,23 @@ header{
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
         }
-        .restaurant__description {
+        &__description { 
             display: flex;
             justify-content: space-between;
             padding: 10px 10px;
             padding-right: 20px;
-            .restaurant__details {
-                .restaurant__nom {
+            &__details {  
+                .nom {
                     margin: 0;
                     font-weight: bold;
                 }
-                .restaurant__ville {
+                .ville {
                     margin-top: 5px ;
-                    font-size: 16px;
+                    font-size: 15px;
                 }
             }
             i {
-                font-size: 23px; 
+                font-size: 22px; 
                 color :$color-grey4 ;
                 
             }
@@ -167,14 +174,14 @@ footer {
     font-size: 15px;
     background-color: $color-grey5;
     color: white;
-    .footer__titre {
+    .titre {
         font-family: $font-primary;
         font-size: 18px;
         margin: 0;
     }
     .bloc {
         display: flex;
-        margin: 10px 0;
+        margin: 15px 0;
         .Icone1{
            margin-right: 13px;
         }
@@ -185,8 +192,12 @@ footer {
             margin: 0;
         }
     }
-    .mention , .contact {
-        margin: 10px;
+    .mention ,.contact {
+        margin: 10px 25px;
+    }
+    a {
+        color: white; 
+        text-decoration: none;
     }
 
 }

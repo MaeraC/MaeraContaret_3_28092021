@@ -42,7 +42,7 @@ header .localisation__ville, header .localisation i {
 }
 .presentation__description {
   text-align: center;
-  font-size: 17px;
+  font-size: 18px;
   color: #525050;
   margin: 0;
 }
@@ -54,11 +54,18 @@ header .localisation__ville, header .localisation i {
   height: 50px;
   padding: 0 20px;
   background: linear-gradient(-5deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: #d4d1d1 1px 3px 6px 3px;
   color: white;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   border-radius: 30px;
   border: none;
+  transition: 0.5s;
+}
+.presentation__bouton :hover {
+  background: linear-gradient(-5deg, #a16be0 0%, #ff93e1 100%);
+  box-shadow: #525050 1px 3px 6px 1px;
+  cursor: pointer;
 }
 
 .fonctionnement {
@@ -72,7 +79,7 @@ header .localisation__ville, header .localisation i {
   display: flex;
   margin: 20px 0;
 }
-.fonctionnement__rubrique .fonctionnement__numero {
+.fonctionnement__rubrique__numero {
   margin: 20px 0;
   padding: 4px 7px;
   font-size: 13px;
@@ -81,7 +88,7 @@ header .localisation__ville, header .localisation i {
   border-radius: 50%;
   position: absolute;
 }
-.fonctionnement__rubrique .fonctionnement__details {
+.fonctionnement__rubrique__details {
   display: flex;
   width: 100%;
   padding: 20px 0;
@@ -91,12 +98,12 @@ header .localisation__ville, header .localisation i {
   box-shadow: #d4d1d1 3px 4px 9px 2px;
   font-weight: bold;
 }
-.fonctionnement__rubrique .fonctionnement__details i {
+.fonctionnement__rubrique__details i {
   padding: 0 30px;
-  font-size: 20px;
+  font-size: 22px;
   color: #525050;
 }
-.fonctionnement__rubrique .fonctionnement__details .IconeStore {
+.fonctionnement__rubrique__details .IconeStore {
   color: #9356DC;
 }
 
@@ -109,36 +116,36 @@ header .localisation__ville, header .localisation i {
   font-size: 22px;
   padding-left: 20px;
 }
-.restaurant__card {
+.restaurant .card {
   margin: 20px;
   height: 230px;
   border-radius: 15px;
   background-color: white;
   box-shadow: #d4d1d1 3px 4px 9px 2px;
 }
-.restaurant__card img {
+.restaurant .card img {
   width: 100%;
   height: 70%;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.restaurant__card .restaurant__description {
+.restaurant .card__description {
   display: flex;
   justify-content: space-between;
   padding: 10px 10px;
   padding-right: 20px;
 }
-.restaurant__card .restaurant__description .restaurant__details .restaurant__nom {
+.restaurant .card__description__details .nom {
   margin: 0;
   font-weight: bold;
 }
-.restaurant__card .restaurant__description .restaurant__details .restaurant__ville {
+.restaurant .card__description__details .ville {
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 15px;
 }
-.restaurant__card .restaurant__description i {
-  font-size: 23px;
+.restaurant .card__description i {
+  font-size: 22px;
   color: #525050;
 }
 
@@ -148,14 +155,14 @@ footer {
   background-color: #3b3a3a;
   color: white;
 }
-footer .footer__titre {
+footer .titre {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
   margin: 0;
 }
 footer .bloc {
   display: flex;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 footer .bloc .Icone1 {
   margin-right: 13px;
@@ -167,7 +174,11 @@ footer .bloc p {
   margin: 0;
 }
 footer .mention, footer .contact {
-  margin: 10px;
+  margin: 10px 25px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
