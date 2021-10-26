@@ -14,6 +14,9 @@ $color-grey4 : rgb(82, 80, 80) ;
 $color-grey5 : rgb(59, 58, 58) ;
 $background : linear-gradient(-5deg, $color-primary 0%, $color-secondary 100%);
 
+/* PAGE ACCUEIL ******************************************************************
+**********************************************************************************/
+
 body {
     font-family: $font-secondary;
     margin: 0;
@@ -131,6 +134,10 @@ header{
         font-size: 22px;
         padding-left: 20px;
     }
+    a {
+        color: black;
+        text-decoration: none;
+    }
     .card {
         margin: 20px;
         height: 230px ;
@@ -200,4 +207,33 @@ footer {
         text-decoration: none;
     }
 
+}
+
+/* PAGE ACCUEIL ******************************************************************
+**********************************************************************************/
+
+.menu1 {
+    text-align: initial;
+    .icone-logo {
+        display: flex;
+        margin-top: 20px; 
+        margin-bottom: 10px;
+        i {
+            margin: 5px 20px;
+            font-size: 18px ;
+        }
+        .logo2 {
+            img {
+                width: 160px; 
+                margin-left: 50px;
+                text-align: center;
+            }
+        }
+    }
+    .image {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
 }
