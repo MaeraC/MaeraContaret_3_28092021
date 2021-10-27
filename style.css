@@ -191,6 +191,7 @@ footer a {
 **********************************************************************************/
 .menu1 {
   text-align: initial;
+  z-index: 1;
 }
 .menu1 .icone-logo {
   display: flex;
@@ -209,6 +210,96 @@ footer a {
 .menu1 .image img {
   width: 100%;
   object-fit: cover;
+}
+
+.menu {
+  background-color: #f8f6f6;
+}
+.menu__titre {
+  display: flex;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #f8f6f6;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 275px;
+}
+.menu__titre h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 26px;
+  margin-left: 20px;
+  padding-top: 5px;
+}
+.menu__titre i {
+  font-size: 22px;
+  padding: 35px;
+}
+
+.bloc .titre__bloc {
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  width: 10%;
+  padding-bottom: 3px;
+  font-weight: 100;
+  border-bottom: #99E2D0 3px solid;
+}
+.bloc .card {
+  margin: 10px;
+  background: white;
+  border-radius: 15px;
+  padding: 15px 10px;
+  box-shadow: #ece9e9 1px 6px 5px 1px;
+}
+.bloc .card .card__titre {
+  font-weight: bold;
+}
+.bloc .card .description {
+  display: flex;
+  justify-content: space-between;
+}
+.bloc .card .description p {
+  margin: 0;
+  padding-top: 5px;
+  font-size: 15px;
+}
+.bloc .card .description .prix {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.titre__bloc2 {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  width: 10%;
+  padding-bottom: 3px;
+  font-weight: 100;
+  border-bottom: #99E2D0 3px solid;
+}
+
+.menu__bouton {
+  text-align: center;
+  margin: 40px 0;
+}
+.menu__bouton button {
+  width: 170px;
+  height: 50px;
+  padding: 0 20px;
+  background: linear-gradient(-5deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: #d4d1d1 1px 3px 6px 3px;
+  color: white;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 30px;
+  border: none;
+  transition: 0.5s;
+}
+.menu__bouton :hover {
+  background: linear-gradient(-5deg, #a16be0 0%, #ff93e1 100%);
+  box-shadow: #525050 1px 3px 6px 1px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
