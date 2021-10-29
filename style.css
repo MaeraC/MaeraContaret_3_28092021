@@ -8,51 +8,45 @@ body {
   margin: 0;
 }
 
-header {
+.header {
   text-align: center;
 }
-header .logo img {
+.header__logo img {
   width: 160px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
-header .localisation {
+.header__location {
   display: flex;
-  padding: 0 110px;
-  justify-content: space-around;
+  justify-content: center;
   background-color: #ece9e9;
   border-top: solid #d4d1d1;
 }
-header .localisation__ville, header .localisation i {
+.header__location .fas {
+  padding: 15px;
+  padding-left: 0;
+}
+.header__location p {
   font-size: 15px;
   font-weight: bold;
   color: #525050;
-  margin: 0;
-  padding: 15px 0px;
 }
 
 .presentation {
-  background-color: #f8f6f6;
-  padding-bottom: 30px;
-}
-.presentation__titre {
-  margin: 0;
   text-align: center;
+  background-color: #f8f6f6;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.presentation__title {
   font-size: 22px;
-  padding: 40px 60px;
-  padding-bottom: 10px;
+  padding: 0 60px;
 }
 .presentation__description {
-  text-align: center;
   font-size: 18px;
   color: #525050;
-  margin: 0;
 }
-.presentation__bouton {
-  text-align: center;
-  margin: 30px;
-}
-.presentation__bouton button {
+.presentation button {
   height: 50px;
   padding: 0 20px;
   background: linear-gradient(-5deg, #9356DC 0%, #FF79DA 100%);
@@ -63,25 +57,27 @@ header .localisation__ville, header .localisation i {
   border-radius: 30px;
   border: none;
   transition: 0.5s;
+  margin-top: 10px;
 }
-.presentation__bouton :hover {
+.presentation :hover {
   background: linear-gradient(-5deg, #a16be0 0%, #ff93e1 100%);
   box-shadow: #525050 1px 3px 6px 1px;
   cursor: pointer;
 }
 
-.fonctionnement {
+.functioning {
   padding: 30px 20px;
   padding-bottom: 50px;
 }
-.fonctionnement__titre {
+.functioning__title {
   font-size: 22px;
 }
-.fonctionnement__rubrique {
+.functioning__element {
   display: flex;
   margin: 20px 0;
+  margin-top: 30px;
 }
-.fonctionnement__rubrique__numero {
+.functioning__element__number {
   margin: 20px 0;
   padding: 4px 7px;
   font-size: 13px;
@@ -90,7 +86,7 @@ header .localisation__ville, header .localisation i {
   border-radius: 50%;
   position: absolute;
 }
-.fonctionnement__rubrique__details {
+.functioning__element__details {
   display: flex;
   width: 100%;
   padding: 20px 0;
@@ -100,143 +96,200 @@ header .localisation__ville, header .localisation i {
   box-shadow: #d4d1d1 3px 4px 9px 2px;
   font-weight: bold;
 }
-.fonctionnement__rubrique__details i {
+.functioning__element__details i {
   padding: 0 30px;
   font-size: 22px;
   color: #525050;
 }
-.fonctionnement__rubrique__details .IconeStore {
+.functioning__element__details :hover {
   color: #9356DC;
 }
 
 .restaurant {
   background-color: #f8f6f6;
   padding-top: 30px;
-  padding-bottom: 50px;
 }
-.restaurant__titre {
+.restaurant__title {
   font-size: 22px;
   padding-left: 20px;
+  margin-bottom: 0;
 }
-.restaurant a {
-  color: black;
+.restaurant__bloc {
+  padding: 20px;
+}
+.restaurant__bloc a {
   text-decoration: none;
+  color: black;
 }
-.restaurant .card {
-  margin: 20px;
-  height: 230px;
+.restaurant__bloc .restaurant__card {
   border-radius: 15px;
   background-color: white;
-  box-shadow: #d4d1d1 3px 4px 9px 2px;
-}
-.restaurant .card img {
   width: 100%;
-  height: 70%;
+  height: 240px;
+  position: relative;
+  box-shadow: #d4d1d1 3px 4px 9px 2px;
+  margin-bottom: 20px;
+}
+.restaurant__bloc .restaurant__card .restaurant__card__image .new {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #99E2D0;
+  height: 30px;
+  width: 80px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #0b916f;
+}
+.restaurant__bloc .restaurant__card .restaurant__card__image img {
+  width: 100%;
+  height: 170px;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.restaurant .card__description {
+.restaurant__bloc .restaurant__card__description {
   display: flex;
   justify-content: space-between;
   padding: 10px 10px;
   padding-right: 20px;
+  position: relative;
 }
-.restaurant .card__description__details .nom {
+.restaurant__bloc .restaurant__card__description__details .nom {
   margin: 0;
   font-weight: bold;
 }
-.restaurant .card__description__details .ville {
+.restaurant__bloc .restaurant__card__description__details .ville {
+  margin: 0;
   margin-top: 5px;
   font-size: 15px;
 }
-.restaurant .card__description i {
+.restaurant__bloc .restaurant__card__description .far {
   font-size: 22px;
   color: #525050;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.restaurant__bloc .restaurant__card__description .fas {
+  position: absolute;
+  top: 18.4px;
+  right: 18.4px;
+  font-size: 24px;
+  color: transparent;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.restaurant__bloc .restaurant__card__description .fas:hover {
+  background-image: linear-gradient(-5deg, #FF79DA 50%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
 }
 
-footer {
+.footer {
   padding: 20px;
   font-size: 15px;
   background-color: #3b3a3a;
   color: white;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
-footer .titre {
+.footer__title {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
   margin: 0;
 }
-footer .bloc {
+.footer__bloc {
   display: flex;
   margin: 15px 0;
 }
-footer .bloc .Icone1 {
+.footer__bloc .Icone1 {
   margin-right: 13px;
 }
-footer .bloc .Icone2 {
+.footer__bloc .Icone2 {
   margin-right: 8px;
 }
-footer .bloc p {
+.footer__bloc p {
   margin: 0;
 }
-footer .mention, footer .contact {
+.footer__mention, .footer__contact {
   margin: 10px 25px;
 }
-footer a {
+.footer a {
   color: white;
   text-decoration: none;
 }
 
 /* PAGE 2 ******************************************************************
 **********************************************************************************/
-.menu1 {
+.header2 {
   text-align: initial;
   z-index: 1;
 }
-.menu1 .icone-logo {
+.header2__logo2 {
   display: flex;
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.menu1 .icone-logo i {
+.header2__logo2 i {
   margin: 5px 20px;
   font-size: 18px;
+  color: black;
 }
-.menu1 .icone-logo .logo2 img {
+.header2__logo2 .logo2 img {
   width: 160px;
   margin-left: 50px;
   text-align: center;
 }
-.menu1 .image img {
+.header2__image img {
   width: 100%;
   object-fit: cover;
 }
 
 .menu {
   background-color: #f8f6f6;
+  position: relative;
 }
-.menu__titre {
+.menu__title {
   display: flex;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: #f8f6f6;
   position: absolute;
-  z-index: 2;
   width: 100%;
-  top: 275px;
+  top: -100px;
 }
-.menu__titre h2 {
+.menu__title h2 {
   font-family: "Shrikhand", cursive;
   font-size: 26px;
   margin-left: 20px;
   padding-top: 5px;
+  margin-bottom: 36px;
 }
-.menu__titre i {
+.menu__title__icone .far {
   font-size: 22px;
   padding: 35px;
 }
+.menu__title__icone .fas {
+  font-size: 24px;
+  position: absolute;
+  top: 34px;
+  right: 33.6px;
+  color: transparent;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.menu__title__icone .fas:hover {
+  background-image: linear-gradient(-5deg, #FF79DA 50%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
 
-.bloc .titre__bloc {
+.bloc__title {
   margin-top: 60px;
   margin-left: 20px;
   margin-bottom: 15px;
@@ -245,31 +298,31 @@ footer a {
   font-weight: 100;
   border-bottom: #99E2D0 3px solid;
 }
-.bloc .card {
-  margin: 10px;
-  background: white;
+.bloc__card {
   border-radius: 15px;
+  background-color: white;
+  margin: 10px;
   padding: 15px 10px;
   box-shadow: #ece9e9 1px 6px 5px 1px;
 }
-.bloc .card .card__titre {
+.bloc__card__title {
   font-weight: bold;
 }
-.bloc .card .description {
+.bloc__card__description {
   display: flex;
   justify-content: space-between;
 }
-.bloc .card .description p {
+.bloc__card__description p {
   margin: 0;
   padding-top: 5px;
   font-size: 15px;
 }
-.bloc .card .description .prix {
+.bloc__card__description .price {
   font-weight: bold;
   margin-right: 10px;
 }
 
-.titre__bloc2 {
+.bloc__title2 {
   margin-top: 30px;
   margin-left: 20px;
   margin-bottom: 15px;
@@ -279,11 +332,11 @@ footer a {
   border-bottom: #99E2D0 3px solid;
 }
 
-.menu__bouton {
+.menu__button {
   text-align: center;
   margin: 40px 0;
 }
-.menu__bouton button {
+.menu__button button {
   width: 170px;
   height: 50px;
   padding: 0 20px;
@@ -296,7 +349,7 @@ footer a {
   border: none;
   transition: 0.5s;
 }
-.menu__bouton :hover {
+.menu__button :hover {
   background: linear-gradient(-5deg, #a16be0 0%, #ff93e1 100%);
   box-shadow: #525050 1px 3px 6px 1px;
   cursor: pointer;
@@ -310,7 +363,7 @@ footer a {
   object-fit: cover;
 }
 
-.titre__bloc3 {
+.bloc__title3 {
   margin-top: 30px;
   margin-left: 20px;
   margin-bottom: 15px;

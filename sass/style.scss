@@ -13,6 +13,45 @@ $color-grey3 : rgb(248, 246, 246) ;
 $color-grey4 : rgb(82, 80, 80) ;
 $color-grey5 : rgb(59, 58, 58) ;
 $background : linear-gradient(-5deg, $color-primary 0%, $color-secondary 100%);
+$shadow : rgb(212, 209, 209) 3px 4px 9px 2px;
+
+@mixin gradient-button {
+    height: 50px; 
+    padding: 0 20px; 
+    background: linear-gradient(-5deg, $color-primary 0%, $color-secondary 100%);
+    box-shadow: $color-grey2 1px 3px 6px 3px ; 
+    color: white;
+    font-size: 15px;
+    font-family: $font-secondary;
+    border-radius: 30px;
+    border: none;
+    transition: 0.5s;
+}
+
+@mixin button-hover {
+    background: linear-gradient(-5deg, lighten($color-primary, 5%) 0%, lighten($color-secondary, 5%) 100%);
+    box-shadow: $color-grey4 1px 3px 6px 1px ; 
+    cursor: pointer;
+}
+
+@mixin title-bloc {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    width: 10%; 
+    padding-bottom: 3px;
+    font-weight: 100;
+    border-bottom: $color-tiertiary 3px solid;
+}
+
+@mixin card {
+    border-radius: 15px;
+    background-color: white;
+}
+
+@mixin display {
+    display : flex ; 
+    justify-content : space-between ; 
+}
 
 /* PAGE ACCUEIL ******************************************************************
 **********************************************************************************/
@@ -22,81 +61,65 @@ body {
     margin: 0;
 }   
 
-header{
+.header {
     text-align: center;
-    .logo {
+    &__logo {
         img {
-            width: 160px; 
-            margin-top: 20px; 
+            width: 160px;
+            margin-top: 20px;
             margin-bottom: 10px;
-        } 
+        }
     }
-    .localisation {
+    &__location { 
         display: flex;
-        padding: 0 110px;
-        justify-content: space-around;
+        justify-content: center;
         background-color: $color-grey1;
         border-top: solid $color-grey2;
-        &__ville , i {
+        .fas {
+            padding: 15px;
+            padding-left: 0;
+        }
+        p {
             font-size: 15px;
             font-weight: bold;
             color: $color-grey4;
-            margin: 0;
-            padding: 15px 0px;
-
         }
-    }
+    }   
 }
 
 .presentation {
+    text-align: center;
     background-color: $color-grey3 ;
-    padding-bottom: 30px;
-    &__titre {
-        margin: 0;
-        text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    &__title {
         font-size: 22px;
-        padding: 40px 60px; 
-        padding-bottom: 10px;
+        padding: 0 60px;
     }
     &__description {
-        text-align: center;
         font-size: 18px;
         color: $color-grey4 ;
-        margin: 0;
     }
-    &__bouton {
-        text-align: center;
-        margin: 30px;
         button {
-            height: 50px; 
-            padding: 0 20px;
-            background: linear-gradient(-5deg, $color-primary 0%, $color-secondary 100%);
-            box-shadow: $color-grey2 1px 3px 6px 3px ; 
-            color: white;
-            font-size: 15px;
-            font-family: $font-secondary;
-            border-radius: 30px;
-            border: none;
-            transition: 0.5s;
+            @include gradient-button ;
+            margin-top: 10px;
         }
         :hover {
-            background: linear-gradient(-5deg, lighten($color-primary, 5%) 0%, lighten($color-secondary, 5%) 100%);
-            box-shadow: $color-grey4 1px 3px 6px 1px ; 
-            cursor: pointer;
+            @include button-hover ;
         }
-    }
 }
 
-.fonctionnement {
+.functioning {
     padding: 30px 20px;
     padding-bottom: 50px;
-    &__titre {
+    &__title {
         font-size: 22px; 
     }
-    &__rubrique {
+    &__element {
         display: flex; 
         margin: 20px 0;
-        &__numero {
+        margin-top: 30px;
+        &__number {
             margin: 20px 0;
             padding: 4px 7px;
             font-size: 13px;
@@ -112,81 +135,125 @@ header{
             border-radius: 20px;
             margin-left: 10px;
             background-color: $color-grey3 ;
-            box-shadow: $color-grey2 3px 4px 9px 2px;
+            box-shadow: $shadow ;
             font-weight: bold;
             i {
                 padding: 0 30px;
                 font-size: 22px;
                 color: $color-grey4;
             }
-            .IconeStore {
+            :hover {
                 color: $color-primary;
             }
         }
     }
 }
 
+
+
 .restaurant {
     background-color: $color-grey3; 
     padding-top: 30px;
-    padding-bottom: 50px;
-    &__titre {
+    &__title {
         font-size: 22px;
         padding-left: 20px;
+        margin-bottom: 0;
     }
-    a {
-        color: black;
-        text-decoration: none;
-    }
-    .card {
-        margin: 20px;
-        height: 230px ;
-        border-radius: 15px;
-        background-color: white;
-        box-shadow: $color-grey2 3px 4px 9px 2px;
-        img {
+    &__bloc {
+        padding: 20px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .restaurant__card { 
+            @include card ;
             width: 100%;
-            height: 70%;
-            object-fit: cover;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-        &__description { 
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 10px;
-            padding-right: 20px;
-            &__details {  
-                .nom {
-                    margin: 0;
+            height: 240px ;
+            position: relative;
+            box-shadow: $shadow ;
+            margin-bottom: 20px;
+            .restaurant__card__image {
+                .new {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    background-color: $color-tiertiary;
+                    height: 30px;
+                    width: 80px;
+                    line-height: 30px;
+                    text-align: center; 
+                    font-size: 13px;
                     font-weight: bold;
+                    color: #0b916f;
                 }
-                .ville {
-                    margin-top: 5px ;
-                    font-size: 15px;
+                img {
+                    width: 100%;
+                    height: 170px;
+                    object-fit: cover;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
                 }
             }
-            i {
-                font-size: 22px; 
-                color :$color-grey4 ;
-                
+            &__description { 
+                @include display; 
+                padding: 10px 10px;
+                padding-right: 20px;
+                position: relative;
+                &__details {  
+                    .nom {
+                        margin: 0;
+                        font-weight: bold;
+                    }
+                    .ville {
+                        margin: 0;
+                        margin-top: 5px ;
+                        font-size: 15px;
+                    }
+                }
+                    .far {
+                        font-size: 22px; 
+                        color :$color-grey4 ;
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        
+                    }
+                    .fas {
+                        position: absolute;
+                        top: 18.4px;
+                        right: 18.4px;
+                        font-size: 24px;
+                        color: transparent;
+                        transition: all 0.5s;
+                        opacity: 0;
+                    }
+                    .fas:hover { 
+                        background-image: linear-gradient(-5deg, $color-secondary 50%, $color-primary 100%); 
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        opacity: 1;
+                    }
             }
         }
-
     }    
 }
 
-footer {
+
+
+
+.footer {
     padding: 20px; 
     font-size: 15px;
     background-color: $color-grey5;
     color: white;
-    .titre {
+    margin-top: 20px;
+    margin-bottom: 0; 
+    &__title {
         font-family: $font-primary;
         font-size: 18px;
         margin: 0;
     }
-    .bloc {
+    &__bloc {
         display: flex;
         margin: 15px 0;
         .Icone1{
@@ -199,7 +266,7 @@ footer {
             margin: 0;
         }
     }
-    .mention ,.contact {
+    &__mention , &__contact {
         margin: 10px 25px;
     }
     a {
@@ -212,16 +279,17 @@ footer {
 /* PAGE 2 ******************************************************************
 **********************************************************************************/
 
-.menu1 {
+.header2 {
     text-align: initial;
     z-index: 1; 
-    .icone-logo {
+    &__logo2 {
         display: flex;
         margin-top: 20px; 
         margin-bottom: 10px;
         i {
             margin: 5px 20px;
             font-size: 18px ;
+            color: black;
         }
         .logo2 {
             img {
@@ -231,7 +299,7 @@ footer {
             }
         }
     }
-    .image {
+    &__image {
         img {
             width: 100%;
             object-fit: cover;
@@ -241,56 +309,69 @@ footer {
 
 .menu {
     background-color: $color-grey3; 
-    &__titre {
+    position: relative;
+    &__title {
         display: flex;
         border-top-left-radius: 40px ;
         border-top-right-radius: 40px;
         background-color: $color-grey3; 
         position: absolute;
-        z-index: 2;
         width: 100%;
-        top: 275px;
+        top: -100px;
         h2 {
             font-family: $font-primary;
             font-size: 26px;
             margin-left: 20px;
             padding-top: 5px;
+            margin-bottom: 36px;
         }
-        i {
-            font-size: 22px;
-            padding: 35px;
+        &__icone {
+            .far {
+                font-size: 22px;
+                padding: 35px;
+                
+            }
+            .fas {
+                font-size: 24px;
+                position: absolute;
+                top: 34px;
+                right: 33.6px;
+                color: transparent;
+                transition: all 0.5s;
+                opacity: 0; 
+            }
+            .fas:hover { 
+                background-image: linear-gradient(-5deg, $color-secondary 50%, $color-primary 100%); 
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 1;
+            }
         }
+        
     }
 }
 
 .bloc {
-    .titre__bloc { 
+    &__title { 
         margin-top: 60px;
-        margin-left: 20px;
-        margin-bottom: 15px;
-        width: 10%; 
-        padding-bottom: 3px;
-        font-weight: 100;
-        border-bottom: $color-tiertiary 3px solid;
+        @include title-bloc
     }
-    .card {
+    &__card {
+        @include card ;
         margin: 10px;
-        background: white;
-        border-radius: 15px;
         padding: 15px 10px;  
         box-shadow: $color-grey1 1px 6px 5px 1px;
-        .card__titre {
+        &__title { 
             font-weight: bold;
         }
-        .description {
-            display: flex;
-            justify-content: space-between;
+        &__description {
+            @include display;
             p {
                 margin: 0;
                 padding-top: 5px;
                 font-size: 15px;
             }
-            .prix {
+            .price {
                 font-weight: bold;
                 margin-right: 10px;
                 
@@ -299,36 +380,20 @@ footer {
     }
 }
 
-.titre__bloc2 { 
+.bloc__title2 { 
     margin-top: 30px;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    width: 10%; 
-    padding-bottom: 3px;
-    font-weight: 100;
-    border-bottom: $color-tiertiary 3px solid;
+    @include title-bloc
 }
 
-.menu__bouton {
+.menu__button {
     text-align: center;
     margin: 40px 0;
     button {
         width: 170px;
-        height: 50px; 
-        padding: 0 20px;
-        background: linear-gradient(-5deg, $color-primary 0%, $color-secondary 100%);
-        box-shadow: $color-grey2 1px 3px 6px 3px ; 
-        color: white;
-        font-size: 15px;
-        font-family: $font-secondary;
-        border-radius: 30px;
-        border: none;
-        transition: 0.5s;
+        @include gradient-button
     }
     :hover {
-        background: linear-gradient(-5deg, lighten($color-primary, 5%) 0%, lighten($color-secondary, 5%) 100%);
-        box-shadow: $color-grey4 1px 3px 6px 1px ; 
-        cursor: pointer;
+        @include button-hover
     }
 } 
 
@@ -342,13 +407,8 @@ footer {
     }
 }
 
-.titre__bloc3 { 
+.bloc__title3 { 
     margin-top: 30px;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    width: 10%; 
-    padding-bottom: 3px;
-    font-weight: 100;
-    border-bottom: $color-tiertiary 3px solid;
+    @include title-bloc
 }
 
