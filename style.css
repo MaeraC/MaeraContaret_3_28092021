@@ -22,6 +22,9 @@ body {
   background-color: #ece9e9;
   border-top: solid #d4d1d1;
 }
+.header__location:hover {
+  cursor: pointer;
+}
 .header__location .fas {
   padding: 15px;
   padding-left: 0;
@@ -59,7 +62,7 @@ body {
   transition: 0.5s;
   margin-top: 10px;
 }
-.presentation :hover {
+.presentation button:hover {
   background: linear-gradient(-5deg, #a16be0 0%, #ff93e1 100%);
   box-shadow: #525050 1px 3px 6px 1px;
   cursor: pointer;
@@ -96,12 +99,16 @@ body {
   box-shadow: #d4d1d1 3px 4px 9px 2px;
   font-weight: bold;
 }
+.functioning__element__details:hover {
+  background-color: white;
+  cursor: pointer;
+}
 .functioning__element__details i {
   padding: 0 30px;
   font-size: 22px;
   color: #525050;
 }
-.functioning__element__details :hover {
+.functioning__element__details:hover > i {
   color: #9356DC;
 }
 
@@ -149,6 +156,10 @@ body {
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+.restaurant__bloc .restaurant__card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 .restaurant__bloc .restaurant__card__description {
   display: flex;
@@ -222,12 +233,17 @@ body {
   color: white;
   text-decoration: none;
 }
+.footer p:hover, .footer a:hover {
+  color: #9356DC;
+  cursor: pointer;
+}
 
 /* PAGE 2 ******************************************************************
 **********************************************************************************/
 .header2 {
   text-align: initial;
   z-index: 1;
+  /*****************************/
 }
 .header2__logo2 {
   display: flex;
@@ -238,6 +254,9 @@ body {
   margin: 5px 20px;
   font-size: 18px;
   color: black;
+}
+.header2__logo2 i:hover {
+  color: #9356DC;
 }
 .header2__logo2 .logo2 img {
   width: 160px;
@@ -304,9 +323,26 @@ body {
   margin: 10px;
   padding: 15px 10px;
   box-shadow: #ece9e9 1px 6px 5px 1px;
+  position: relative;
+  /*  white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; */
+  overflow: hidden;
 }
 .bloc__card__title {
   font-weight: bold;
+}
+.bloc__card:hover {
+  cursor: pointer;
+}
+.bloc__card:hover > .bloc__card__icone {
+  transform: translateX(0%);
+}
+.bloc__card:hover > .bloc__card__description .price {
+  transform: translateX(-220%);
+}
+.bloc__card:hover > .bloc__card__icone .far {
+  transform: rotate(360deg);
 }
 .bloc__card__description {
   display: flex;
@@ -320,6 +356,79 @@ body {
 .bloc__card__description .price {
   font-weight: bold;
   margin-right: 10px;
+  transform: translateX(0%);
+  transition: transform 0.8s ease;
+}
+
+.bloc__card__icone {
+  position: absolute;
+  background-color: #99E2D0;
+  right: 0px;
+  top: 0;
+  height: 72px;
+  width: 70px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: translateX(100%);
+  transition: transform 0.8s ease;
+}
+.bloc__card__icone .far {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  line-height: 72px;
+  color: white;
+  transform: rotate(0deg);
+  transition: transform 0.8s ease;
+}
+
+.animation {
+  animation: fadein 2s ease-in-out;
+  -webkit-animation: fadein 2s ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#dish1 {
+  animation-delay: 0.1s;
+}
+
+#dish2 {
+  animation-delay: 0.2s;
+}
+
+#dish3 {
+  animation-delay: 0.3s;
+}
+
+#dish4 {
+  animation-delay: 0.4s;
+}
+
+#dish5 {
+  animation-delay: 0.5s;
+}
+
+#dish6 {
+  animation-delay: 0.6s;
+}
+
+#dish7 {
+  animation-delay: 0.7s;
+}
+
+#dish8 {
+  animation-delay: 0.8s;
+}
+
+#dish9 {
+  animation-delay: 0.9s;
 }
 
 .bloc__title2 {
@@ -357,7 +466,7 @@ body {
 
 /* PAGE 3 ******************************************************************
 **********************************************************************************/
-.image2 img {
+.header2__image img {
   width: 100%;
   height: 270px;
   object-fit: cover;
