@@ -1,0 +1,36 @@
+.footer {
+    padding: 20px; 
+    font-size: 15px;
+    background-color: $color-grey5;
+    color: white;
+    margin-bottom: 0; 
+    &__title {
+        font-family: $font-primary;
+        font-size: 18px;
+        margin: 0;
+    }
+    &__bloc {
+        display: flex;
+        margin: 15px 0;
+        .Icone1{
+        margin-right: 13px;
+        }
+        .Icone2 {
+            margin-right: 8px;
+        }
+        p {
+            margin: 0;
+        }
+    }
+    &__mention , &__contact {
+        margin: 10px 25px;
+    }
+    a {
+        color: white; 
+        text-decoration: none;
+    }
+    .footer__container p:hover , a:hover {
+        color: $color-primary;
+        cursor: pointer;
+    }
+}

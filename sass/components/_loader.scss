@@ -1,0 +1,56 @@
+.container-loader {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 2;
+    background: white;  
+    visibility: hidden; 
+    animation: container 2s linear ;
+    .loader {
+        width: 60px;
+        height: 60px;
+        border: 10px solid $color-primary;
+        border-top: 10px solid $color-secondary;
+        border-bottom: 10px solid $color-tiertiary;
+        border-radius: 50%;
+        position: absolute; 
+        z-index: 3;
+        top: 0; 
+        left: 0;
+        right: 0;
+        bottom: 0; 
+        margin: auto;
+        animation: loader 2s linear;  
+    } 
+}
+
+@keyframes container {
+    0% {  
+        visibility: visible; 
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+        visibility: visible; 
+    }
+    50% {
+        transform: rotate(360deg);
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+        transform: rotate(0deg);
+    }
+}
