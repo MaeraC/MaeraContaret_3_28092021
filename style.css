@@ -243,6 +243,8 @@
   position: relative;
   box-shadow: #d4d1d1 3px 4px 9px 2px;
   margin-bottom: 20px;
+  margin-top: 0;
+  margin-left: 0;
 }
 .restaurant__bloc .restaurant__card .restaurant__card__image .new {
   position: absolute;
@@ -278,6 +280,7 @@
 .restaurant__bloc .restaurant__card__description__details .nom {
   margin: 0;
   font-weight: bold;
+  font-size: 16px;
 }
 .restaurant__bloc .restaurant__card__description__details .ville {
   margin: 0;

@@ -83,6 +83,8 @@
                 position: relative;
                 box-shadow: $shadow ;
                 margin-bottom: 20px;
+                margin-top: 0;
+                margin-left: 0;
                 .restaurant__card__image {
                     .new {
                         position: absolute;
@@ -118,6 +120,7 @@
                         .nom {
                             margin: 0;
                             font-weight: bold;
+                            font-size: 16px;
                         }
                         .ville {
                             margin: 0;
