@@ -1,0 +1,112 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/police";
+@import "./components/button";
+@import "./components/loader";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./pages/index.scss";
+@import "./pages/restaurants";
+
+
+    body {
+        font-family: $font-secondary;
+        margin: 0;
+    }   
+
+
+
+@media only screen and (min-width:500px) {
+
+    h2 , footer  {
+        text-align: center;
+    }
+
+    .footer__bloc {
+        justify-content: center;
+    }
+
+    .logo2 {
+        margin: auto;
+        margin-left: 80px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+
+    .functioning {
+        margin: 0 100px;
+    }
+
+    .restaurant__bloc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a {
+            width: 48%;
+            
+        }
+    }
+
+    .restaurant__card__image {
+        width: 100%;
+    }
+
+    .menu__title {
+        justify-content: center;
+        h2 {
+            margin: 23px;
+        }
+        &__icone {
+            position: relative;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .functioning {
+        margin: 0;
+    }
+
+    .functioning__container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .functioning__element__details {
+        div {
+            margin-right: 20px;
+        }
+    }
+
+    .restaurant__bloc {
+        width: 60%;
+        margin: auto;
+    } 
+
+    .menu__container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .menu__title {
+        position: initial;
+        justify-content: center;
+        h2 {
+            margin: 0 ;
+            padding: 30px 0;
+        }
+    }
+
+    .bloc__title {
+        margin-top: 30px;
+    }
+    .bloc {
+        width: 30%
+    }
+}
+
+
+
+
