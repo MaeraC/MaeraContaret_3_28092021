@@ -145,11 +145,9 @@
 .footer__bloc .Icone2 {
   margin-right: 8px;
 }
-.footer__bloc p {
-  margin: 0;
-}
 .footer__mention, .footer__contact {
   margin: 10px 25px;
+  list-style: none;
 }
 .footer a {
   color: white;
@@ -158,6 +156,9 @@
 .footer .footer__container p:hover, .footer a:hover {
   color: #9356DC;
   cursor: pointer;
+}
+.footer__container {
+  padding: 0;
 }
 
 .presentation {
