@@ -1,3 +1,12 @@
+@keyframes opacity-menu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .header2 {
     text-align: initial;
     &__logo2 {
@@ -157,15 +166,6 @@
 .animation {
     animation: opacity-menu 2s linear ;
     -webkit-animation: opacity-menu 2s linear ;
-}
-
-@keyframes opacity-menu {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 #dish1 {
