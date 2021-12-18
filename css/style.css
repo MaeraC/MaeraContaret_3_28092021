@@ -147,6 +147,9 @@ body {
 .functioning__title {
   font-size: 22px;
 }
+.functioning__container {
+  padding-left: 0;
+}
 .functioning__element {
   display: flex;
   margin: 20px 0;
