@@ -1,13 +1,13 @@
 # Ohmyfood
 *Projet fictif de formation n°02/11 / OpenClassrooms*
 
-Home page
+### Home page
 ![Image du site Ohmyfood](images/ohmyfoodsite.png)
 
-Selected restaurant 
+### Selected restaurant 
 ![Image du site Ohmyfood](images/ohmyffodres.png)
 
-Mobile version 
+### Mobile version 
 ![Image du site Ohmyfood](images/omfmobile.png)
 ![Image du site Ohmyfood](images/ofm2.png)
 
