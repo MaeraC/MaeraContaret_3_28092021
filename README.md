@@ -1,8 +1,28 @@
-# MaeraContaret_3_28092021
+# Ohmyfood
+*Projet fictif de formation n°02/11 / OpenClassrooms*
 
-Projet 3 Ohmyfood! 
+Home page
+![Image du site Ohmyfood](images/ohmyfoodsite.png)
 
-Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux
-utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les
-restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte
-!
+Selected restaurant 
+![Image du site Ohmyfood](images/ohmyffodres.png)
+
+Mobile version 
+![Image du site Ohmyfood](images/omfmobile.png)
+![Image du site Ohmyfood](images/ofm2.png)
+
+## Besoin 
+Site de commande de repas en ligne, le concept permet aux utilisateurs de composer leur propre menu et aux restaurants de le préparer à l'avance. Fini les pertes de temps à consulter la carte et à préparer la commande !
+
+## Problématique 
+Développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques et intègre un système de commande anticipée en plus du classique système de réservation
+
+## Livrable 
+   - intégration mobile-first HTML de la page d'accueil
+   - intégration de 4 pages, contenant chacune le menu d’un restaurant
+   - intégration des effets graphiques et animations
+
+## Compétences développées 
+   - Mettre en place une structure de navigation pour un site web
+   - Mettre en œuvre des effets CSS graphiques avancés
+   - Assurer la cohérence graphique d'un site web
