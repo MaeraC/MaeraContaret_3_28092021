@@ -1,10 +1,9 @@
 function restaurantFactory(data) {
-    const { name, town, image } = data
+    const { name, town, image, id } = data
 
     function getRestaurantCard() {
         const restContainer = document.querySelector(".rest-container")
-        const cardLink = document.createElement("a")
-        const card = document.createElement("div")
+        const card = document.createElement("a")
         const cardImage = document.createElement("img")
         const cardDescription = document.createElement("div")
         const cardDetails = document.createElement("div")
@@ -12,7 +11,7 @@ function restaurantFactory(data) {
         const cardTown = document.createElement("span")
         const cardLike = document.createElement("i")
 
-        cardLink.setAttribute("href", "")
+        card.setAttribute("href", `../pages/menu.html?id=${id}`)
         cardImage.setAttribute("src", image)
 
         cardName.textContent = name 
@@ -25,8 +24,7 @@ function restaurantFactory(data) {
         cardTown.classList.add("restaurant-town")
         cardDescription.classList.add("restaurant-description")
 
-        restContainer.appendChild(cardLink)
-        cardLink.appendChild(card)
+        restContainer.appendChild(card)
         card.appendChild(cardImage)
         card.appendChild(cardDescription)
         cardDescription.appendChild(cardDetails)
