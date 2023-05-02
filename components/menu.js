@@ -1,0 +1,1 @@
+const menuSection = document.querySelector(".menu")

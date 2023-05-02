@@ -1,5 +1,4 @@
 const sectionFunctionning= document.querySelector(".functioning")
-const titleFunctionning = document.createElement("h2")
 const functionningContainer = document.createElement("div")
 
 const functionningArray = [
@@ -43,11 +42,6 @@ functionningArray.forEach((item) => {
     functionningDetails.appendChild(title)
 })
 
-
-titleFunctionning.classList.add("functionning__title")
 functionningContainer.classList.add("functionning_container")
 
-titleFunctionning.textContent = "Fonctionnement"
-
-sectionFunctionning.appendChild(titleFunctionning)
 sectionFunctionning.appendChild(functionningContainer)
