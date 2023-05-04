@@ -1,20 +1,20 @@
 function displayMenu(restaurant) {
-    const menuSection = document.querySelector(".menu")
-    const menuContainer = document.createElement("div")
-    const entreesContainer = document.createElement("div")
-    const entreestitle = document.createElement("h4")
-    const dishesContainer = document.createElement("div")
-    const dishestitle = document.createElement("h4")
-    const dessertsContainer = document.createElement("div")
-    const dessertsTitle = document.createElement("h4")
+    const menuSection                   = document.querySelector(".menu")
+    const menuContainer                 = document.createElement("div")
+    const entreesContainer              = document.createElement("div")
+    const entreestitle                  = document.createElement("h4")
+    const dishesContainer               = document.createElement("div")
+    const dishestitle                   = document.createElement("h4")
+    const dessertsContainer             = document.createElement("div")
+    const dessertsTitle                 = document.createElement("h4")
 
-    const entrees = restaurant.entrees
-    const dishes = restaurant.dishes
-    const desserts = restaurant.desserts
+    const entrees                       = restaurant.entrees
+    const dishes                        = restaurant.dishes
+    const desserts                      = restaurant.desserts
 
-    entreestitle.textContent = "ENTREES"
-    dishestitle.textContent = "PLATS"
-    dessertsTitle.textContent = "DESSERTS"
+    entreestitle.textContent            = "ENTREES"
+    dishestitle.textContent             = "PLATS"
+    dessertsTitle.textContent           = "DESSERTS"
 
     menuContainer.classList.add("menu__container")
     entreesContainer.classList.add("bloc")
@@ -33,18 +33,18 @@ function displayMenu(restaurant) {
     dessertsContainer.appendChild(dessertsTitle)
 
     entrees.forEach((entree => {
-        const entreeBloc = document.createElement("div")
-        const entreeCard = document.createElement("div")
-        const entreeCardTitle = document.createElement("span")
-        const entreeCardDesc = document.createElement("div")
-        const entreeDetails = document.createElement("span")
-        const entreePrice = document.createElement("span")
-        const checkContainer = document.createElement("div")
-        const checkIcon = document.createElement("i")
+        const entreeBloc                = document.createElement("div")
+        const entreeCard                = document.createElement("div")
+        const entreeCardTitle           = document.createElement("span")
+        const entreeCardDesc            = document.createElement("div")
+        const entreeDetails             = document.createElement("span")
+        const entreePrice               = document.createElement("span")
+        const checkContainer            = document.createElement("div")
+        const checkIcon                 = document.createElement("i")
 
-        entreeCardTitle.textContent = entree.name
-        entreeDetails.textContent = entree.description
-        entreePrice.textContent = entree.price
+        entreeCardTitle.textContent     = entree.name
+        entreeDetails.textContent       = entree.description
+        entreePrice.textContent         = entree.price + "€"
 
         checkIcon.classList.add("far", "fa-check-circle")
         entreeBloc.classList.add("bloc__container")
@@ -66,18 +66,18 @@ function displayMenu(restaurant) {
     }))
 
     dishes.forEach((dish => {
-        const entreeBloc = document.createElement("div")
-        const entreeCard = document.createElement("div")
-        const entreeCardTitle = document.createElement("span")
-        const entreeCardDesc = document.createElement("div")
-        const entreeDetails = document.createElement("span")
-        const entreePrice = document.createElement("span")
-        const checkContainer = document.createElement("div")
-        const checkIcon = document.createElement("i")
+        const entreeBloc                = document.createElement("div")
+        const entreeCard                = document.createElement("div")
+        const entreeCardTitle           = document.createElement("span")
+        const entreeCardDesc            = document.createElement("div")
+        const entreeDetails             = document.createElement("span")
+        const entreePrice               = document.createElement("span")
+        const checkContainer            = document.createElement("div")
+        const checkIcon                 = document.createElement("i")
 
-        entreeCardTitle.textContent = dish.name
-        entreeDetails.textContent = dish.description
-        entreePrice.textContent = dish.price
+        entreeCardTitle.textContent     = dish.name
+        entreeDetails.textContent       = dish.description
+        entreePrice.textContent         = dish.price + "€"
 
         checkIcon.classList.add("far", "fa-check-circle")
         entreeBloc.classList.add("bloc__container")
@@ -99,18 +99,18 @@ function displayMenu(restaurant) {
     }))
 
     desserts.forEach((dessert => {
-        const entreeBloc = document.createElement("div")
-        const entreeCard = document.createElement("div")
-        const entreeCardTitle = document.createElement("span")
-        const entreeCardDesc = document.createElement("div")
-        const entreeDetails = document.createElement("span")
-        const entreePrice = document.createElement("span")
-        const checkContainer = document.createElement("div")
-        const checkIcon = document.createElement("i")
+        const entreeBloc                = document.createElement("div")
+        const entreeCard                = document.createElement("div")
+        const entreeCardTitle           = document.createElement("span")
+        const entreeCardDesc            = document.createElement("div")
+        const entreeDetails             = document.createElement("span")
+        const entreePrice               = document.createElement("span")
+        const checkContainer            = document.createElement("div")
+        const checkIcon                 = document.createElement("i")
 
-        entreeCardTitle.textContent = dessert.name
-        entreeDetails.textContent = dessert.description
-        entreePrice.textContent = dessert.price
+        entreeCardTitle.textContent     = dessert.name
+        entreeDetails.textContent       = dessert.description
+        entreePrice.textContent         = dessert.price + "€"
 
         checkIcon.classList.add("far", "fa-check-circle")
         entreeBloc.classList.add("bloc__container")
@@ -129,6 +129,6 @@ function displayMenu(restaurant) {
         entreeCardDesc.appendChild(entreePrice)
         entreeBloc.appendChild(checkContainer)
         checkContainer.appendChild(checkIcon)
-    }))
+    })) 
 
 }

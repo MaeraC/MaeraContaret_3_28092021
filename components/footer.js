@@ -1,20 +1,20 @@
-const footer = document.querySelector(".footer")
-const footerTitle = document.createElement("span")
-const footerContainer = document.createElement("div")
-const footerBloc1 = document.createElement("div")
-const iconBloc1 = document.createElement("i")
-const descBloc1 = document.createElement("a")
-const footerBloc2 = document.createElement("div")
-const iconBloc2 = document.createElement("i")
-const descBloc2 = document.createElement("a")
-const footerMention = document.createElement("a")
-const footerContact = document.createElement("a")
+const footer                    = document.querySelector(".footer")
+const footerTitle               = document.createElement("span")
+const footerContainer           = document.createElement("div")
+const footerBloc1               = document.createElement("div")
+const iconBloc1                 = document.createElement("i")
+const descBloc1                 = document.createElement("a")
+const footerBloc2               = document.createElement("div")
+const iconBloc2                 = document.createElement("i")
+const descBloc2                 = document.createElement("a")
+const footerMention             = document.createElement("a")
+const footerContact             = document.createElement("a")
 
-footerTitle.textContent = "ohmyfood"
-descBloc1.textContent = "Proposer un restaurant"
-descBloc2.textContent = "Devenir partenaire"
-footerMention.textContent = "Mentions légales"
-footerContact.textContent = "Contact"
+footerTitle.textContent         = "ohmyfood"
+descBloc1.textContent           = "Proposer un restaurant"
+descBloc2.textContent           = "Devenir partenaire"
+footerMention.textContent       = "Mentions légales"
+footerContact.textContent       = "Contact"
 
 iconBloc1.classList.add("fas", "fa-utensils", "Icone1")
 iconBloc2.classList.add("fas", "fa-hands-helping", "Icone2")

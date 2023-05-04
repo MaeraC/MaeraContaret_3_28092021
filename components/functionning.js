@@ -1,7 +1,7 @@
-const sectionFunctionning= document.querySelector(".functioning")
-const functionningContainer = document.createElement("div")
+const sectionFunctionning               = document.querySelector(".functioning")
+const functionningContainer             = document.createElement("div")
 
-const functionningArray = [
+const functionningArray                 = [
     {
         "number": "1",
         "icon": "fa-mobile-alt",
@@ -20,14 +20,14 @@ const functionningArray = [
 ]
 
 functionningArray.forEach((item) => {
-    const functionningBox = document.createElement("div")
-    const number = document.createElement("span")
-    const functionningDetails = document.createElement("div")
-    const icon = document.createElement("i")
-    const title = document.createElement("span")
+    const functionningBox               = document.createElement("div")
+    const number                        = document.createElement("span")
+    const functionningDetails           = document.createElement("div")
+    const icon                          = document.createElement("i")
+    const title                         = document.createElement("span")
 
-    number.textContent = item.number
-    title.textContent = item.title
+    number.textContent                  = item.number
+    title.textContent                   = item.title
 
     icon.classList.add("fas", item.icon)
     number.classList.add("functionning-number")

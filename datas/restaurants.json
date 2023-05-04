@@ -123,7 +123,7 @@
         "id": 3,
         "town": "Cité Rouge",
         "image": "../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg",
-        "entree": [
+        "entrees": [
             {
                 "name": "Tartare de poulpe acidulé",
                 "description": "Aux zetes d'orange",
@@ -180,7 +180,7 @@
         "id": 4,
         "town": "Folie-Méricourt",
         "image": "../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
-        "entree": [
+        "entrees": [
             {
                 "name": "Tartare de thon",
                 "description": "Assaisonné au yuzu",
@@ -238,7 +238,7 @@
         "id": 5,
         "town": "Bastille",
         "image": "../images/bruschetta-au-saumon-mozzarella-au-concombre-oignon-rouge-tomate-sechee-citron-vert.jpg",
-        "entree": [
+        "entrees": [
             {
                 "name": "Fricassée d'escargot",
                 "description": "Au piment d'espelette",
@@ -301,7 +301,7 @@
         "id": 7,
         "town": "Georges V",
         "image": "../images/petites-annonces-nourriture-haute-cuisine-salade-mangal-herbes-fraiches-verdure.jpg",
-        "entree": [
+        "entrees": [
             {
                 "name": "Fricassée d'escargot",
                 "description": "Au piment d'espelette",
@@ -358,7 +358,7 @@
         "id": 8,
         "town": "Saint Paul",
         "image": "../images/poisson-roti-servi-citrons-grenade-assiette-fromage.jpg",
-        "entree": [
+        "entrees": [
             {
                 "name": "Fricassée d'escargot",
                 "description": "Au piment d'espelette",
@@ -415,7 +415,7 @@
         "id": 9,
         "town": "Nation",
         "image": "../images/salade-crevettes-frites-laitue-roquette-orange-tomate-noix-basilic-opale-noir.jpg",
-        "entree": [
+        "entrees": [
             {
                 "name": "Fricassée d'escargot",
                 "description": "Au piment d'espelette",
@@ -472,7 +472,7 @@
         "id": 10,
         "town": "République",
         "image": "../images/sandwiches-au-jambon-legumes.jpg",
-        "entree": [
+        "entrees": [
             {
                 "name": "Fricassée d'escargot",
                 "description": "Au piment d'espelette",
@@ -529,7 +529,7 @@
         "id": 11,
         "town": "Palais Royal",
         "image": "../images/soupe-aux-huitres-verre-vin.jpg",
-        "entree": [
+        "entrees": [
             {
                 "name": "Fricassée d'escargot",
                 "description": "Au piment d'espelette",
@@ -586,7 +586,7 @@
         "id": 12,
         "town": "Opéra",
         "image": "../images/steak-benedictine-aux-oeufs-puree-batata-sauce-aux-champignons.jpg",
-        "entree": [
+        "entrees": [
             {
                 "name": "Fricassée d'escargot",
                 "description": "Au piment d'espelette",
@@ -643,7 +643,7 @@
         "id": 13,
         "town": "Madeleine",
         "image": "../images/steak-saumon-frit-place-rondelles-pomme-terre-tomate-brocoli.jpg",
-        "entree": [
+        "entrees": [
             {
                 "name": "Fricassée d'escargot",
                 "description": "Au piment d'espelette",
@@ -700,7 +700,7 @@
         "id": 14,
         "town": "Concorde",
         "image": "../images/tartare-thon.jpg",
-        "entree": [
+        "entrees": [
             {
                 "name": "Fricassée d'escargot",
                 "description": "Au piment d'espelette",

@@ -1,19 +1,19 @@
-const presentationSection = document.querySelector(".presentation")
-const presentationTitle = document.createElement("h2")
-const presentationDescription = document.createElement("p")
-const locationBloc = document.createElement("div")
-const presentationButton = document.createElement("a")
-const form = document.createElement("form")
-const searchBar = document.createElement("input")
-const barResults = document.createElement("div")
+const presentationSection               = document.querySelector(".presentation")
+const presentationTitle                 = document.createElement("h2")
+const presentationDescription           = document.createElement("p")
+const locationBloc                      = document.createElement("div")
+const presentationButton                = document.createElement("a")
+const form                              = document.createElement("form")
+const searchBar                         = document.createElement("input")
+const barResults                        = document.createElement("div")
 
 searchBar.setAttribute("type", "text")
 searchBar.setAttribute("placeholder", "Sélectionnez le quartier de votre choix")
 presentationButton.setAttribute("href", "")
 
-presentationTitle.textContent = "Réservez le menu qui vous convient"
-presentationDescription.textContent = "Découvrez des restaurants d'exception, sélectionnés par nos soins."
-presentationButton.textContent = "Choisir un restaurant"
+presentationTitle.textContent           = "Réservez le menu qui vous convient"
+presentationDescription.textContent     = "Découvrez des restaurants d'exception, sélectionnés par nos soins."
+presentationButton.textContent          = "Choisir un restaurant"
 
 presentationTitle.classList.add("presentation-title")
 presentationDescription.classList.add("presentation-description")

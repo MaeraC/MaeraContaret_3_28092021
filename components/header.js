@@ -1,6 +1,6 @@
-const header = document.querySelector(".header")
-const logo = document.createElement("a")
-const logoImg = document.createElement("img")
+const header                = document.querySelector(".header")
+const logo                  = document.createElement("a")
+const logoImg               = document.createElement("img")
 
 logo.setAttribute("href", "../index.html")
 logoImg.setAttribute("src", "../images/ohmyfood.png")

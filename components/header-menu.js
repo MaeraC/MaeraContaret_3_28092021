@@ -1,8 +1,8 @@
 function displayHeader() {
-    const headerMenu = document.querySelector(".header-menu")
-    const previousPage = document.createElement("i")
-    const logoLink = document.createElement("a")
-    const logoImg = document.createElement("img")
+    const headerMenu                = document.querySelector(".header-menu")
+    const previousPage              = document.createElement("i")
+    const logoLink                  = document.createElement("a")
+    const logoImg                   = document.createElement("img")
 
     previousPage.classList.add("fas", "fa-arrow-left")
     logoLink.classList.add("logo-link")

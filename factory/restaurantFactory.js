@@ -1,21 +1,21 @@
 function restaurantFactory(data) {
-    const { name, town, image, id } = data
+    const { name, town, image, id }         = data
 
     function getRestaurantCard() {
-        const restContainer = document.querySelector(".rest-container")
-        const card = document.createElement("a")
-        const cardImage = document.createElement("img")
-        const cardDescription = document.createElement("div")
-        const cardDetails = document.createElement("div")
-        const cardName = document.createElement("h3")
-        const cardTown = document.createElement("span")
-        const cardLike = document.createElement("i")
+        const restContainer                 = document.querySelector(".rest-container")
+        const card                          = document.createElement("a")
+        const cardImage                     = document.createElement("img")
+        const cardDescription               = document.createElement("div")
+        const cardDetails                   = document.createElement("div")
+        const cardName                      = document.createElement("h3")
+        const cardTown                      = document.createElement("span")
+        const cardLike                      = document.createElement("i")
 
         card.setAttribute("href", `../pages/menu.html?id=${id}`)
         cardImage.setAttribute("src", image)
 
-        cardName.textContent = name 
-        cardTown.textContent = town
+        cardName.textContent                = name 
+        cardTown.textContent                = town
 
         card.classList.add("restaurant-card")
         cardImage.classList.add("restaurant-card-image")
