@@ -4,7 +4,7 @@ function displayBanner(restaurant) {
     const banner = document.createElement("img")
 
     banner.setAttribute("src", restaurant.image)
+    banner.classList.add("header-banner")
 
     headerMenuu.appendChild(banner)
-
 }

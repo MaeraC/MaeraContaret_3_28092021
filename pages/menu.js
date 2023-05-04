@@ -14,6 +14,9 @@ fetch("../datas/restaurants.json")
         if (restaurant.id == param) {
             displayHeader()
             displayBanner(restaurant)
+            displayTitleMenu(restaurant)
+            displayMenu(restaurant)
+            displayOrderBtn()
         }
     })
 })

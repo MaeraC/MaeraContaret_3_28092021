@@ -98,6 +98,7 @@ a {
 }
 .header {
   text-align: center;
+  
 }
 .logo img , .logo-link img {
   width: 160px;
@@ -296,36 +297,9 @@ a {
 /*PAGES MENUS ***************************************************************************************
 *****************************************************************************************************/
 
-.header2 {
-  text-align: initial;
-}
-.header2__logo2 {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.header2__logo2 i {
-  margin: 5px 20px;
-  font-size: 18px;
-  color: black;
-  position: absolute;
-}
-.header2__logo2 i:hover {
-  color: #9356DC;
-}
-.header2__logo2 .logo2 {
-  margin: auto;
-}
-.header2__logo2 .logo2 img {
-  width: 160px;
-}
-.header2__image img {
+.header-banner {
   width: 100%;
-  object-fit: cover;
-}
-.header2__image img {
-  width: 100%;
-  height: 270px;
+  height: 30vh;
   object-fit: cover;
 }
 .menu {
@@ -333,7 +307,7 @@ a {
   position: relative;
   padding-bottom: 20px;
 }
-.menu__title {
+.title-container {
   display: flex;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -342,7 +316,7 @@ a {
   width: 100%;
   top: -90px;
 }
-.menu__title h2 {
+.title-container h2 {
   font-family: "Shrikhand", cursive;
   font-size: 24px;
   padding-top: 5px;
@@ -350,26 +324,11 @@ a {
   margin: auto;
   margin-left: 20px;
 }
-.menu__title__icone .far {
+.title-container__icone .far {
   font-size: 22px;
   padding: 35px;
 }
-.menu__title__icone .fas {
-  font-size: 24px;
-  position: absolute;
-  top: 34px;
-  right: 34px;
-  color: transparent;
-  transition: all 0.5s;
-  opacity: 0;
-}
-.menu__title__icone .fas:hover {
-  background-image: linear-gradient(-5deg, #FF79DA 50%, #9356DC 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-  cursor: pointer;
-}
+
 .menu__button {
   text-align: center;
   margin: 40px 0;
@@ -548,13 +507,13 @@ a {
     width: 100%;
   }
 
-  .menu__title {
+  .title-container {
     justify-content: center;
   }
-  .menu__title h2 {
+  .title-container h2 {
     margin: 23px;
   }
-  .menu__title__icone {
+  .title-container__icone {
     position: relative;
   }
 }
@@ -583,11 +542,11 @@ a {
     justify-content: space-evenly;
   }
 
-  .menu__title {
+  .title-container {
     position: initial;
     justify-content: center;
   }
-  .menu__title h2 {
+  .title-container h2 {
     margin: 0;
     padding: 30px 0;
   }
@@ -650,4 +609,4 @@ a {
 }
 
 
-/*# sourceMappingURL=style.css.map */
+
