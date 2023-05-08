@@ -20,35 +20,39 @@ fetch("../datas/restaurants.json")
 
             const products = restaurant.products 
             const menuSection = document.querySelector(".menu")
+            const menuContainer = document.createElement("div")
 
             // Implémentation de chaque produit dans le DOM
             products.forEach((product) => {
                 
                 const productContainer = document.createElement("div")
                 productContainer.classList.add("bloc__container")
+                menuContainer.classList.add("menu-container")
 
                 productContainer.innerHTML = `
-                    <div class="bloc__container__card column animation">
-                        <h4 class="bloc__container__card__title">${product.name}</h4>
-                        <div class="bloc__container__card__description">
-                            <p class="details">${product.description}</p>
-                            <span class="price">${product.price}<span>
-                        </div>
+                <div class="bloc__container__card column animation">
+                    <h4 class="bloc__container__card__title">${product.name}</h4>
+                    <div class="bloc__container__card__description">
+                        <p class="details">${product.description}</p>
+                        <span class="price">${product.price}€<span>
                     </div>
-                    <div class="bloc__container__icone">
-                        <button class="btn-plus add-to-cart-btn" data-id="${product.id}" data-name="${product.name}" >
-                            <i class="fas fa-plus"></i>
-                        </button>
-                        <select id="quantity" name="q" class="quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                `
-                menuSection.appendChild(productContainer)
+                </div>
+                <div class="bloc__container__icone">
+                    <button class="btn-plus add-to-cart-btn" data-id="${product.id}" data-name="${product.name}" >
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <select id="quantity" name="q" class="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            `
+                
+                menuSection.appendChild(menuContainer)
+                menuContainer.appendChild(productContainer)
 
                 const addToCartBtn = productContainer.querySelector(".add-to-cart-btn")
                 const quantitySelect = productContainer.querySelector(".quantity")
