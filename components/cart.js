@@ -51,8 +51,10 @@ function displayCart() {
     // Configuration des éléments HTML
     name.textContent = item.product.name
     price.textContent = item.product.price + ' €'
-    removeBtn.textContent = 'Supprimer'
+    removeBtn.innerHTML = '<i class="fas fa-trash"></i>'
     removeBtn.classList.add('remove-btn')
+    name.classList.add('namecart')
+    price.classList.add('pricecart')
 
     // Suppression de l'article du panier lorsque le bouton "Supprimer" est cliqué
     removeBtn.addEventListener('click', () => {

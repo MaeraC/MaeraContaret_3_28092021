@@ -475,17 +475,49 @@ a {
   cursor: pointer;
 }
 .cart-container {
-  width: 200px;
-  background-color: grey;
+  width: 400px;
+  background-color: white;
   position: absolute;
-  top: 50px;
-  right: 10px;
+  top: 350%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: none;
+  z-index: 999;
+  border-radius: 30px;
+  padding: 0 20px;
+}
+#cart {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+#cart li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.namecart {
+  width: 70%;
+  background-color: red;
+  text-align: left;
+}
+.pricecart {
+  width: 25%;
+  font-weight: bold;
 }
 .fa-times {
   position: absolute;
   top: 10px;
-  left: 10px;
+  left: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.remove-btn {
+  color: white;
+  font-size: 18px;
+  background-color: #99E2D0;
+  border: none;
+  padding: 3px 6px;
   cursor: pointer;
 }
 
