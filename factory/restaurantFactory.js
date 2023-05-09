@@ -9,10 +9,14 @@ function restaurantFactory(data) {
         const cardDetails                   = document.createElement("div")
         const cardName                      = document.createElement("h3")
         const cardTown                      = document.createElement("span")
-        const cardLike                      = document.createElement("i")
+        const heartEmpty                    = document.createElement("i")
+        const heartFull                     = document.createElement("i")
 
         card.setAttribute("href", `../pages/menu.html?id=${id}`)
         cardImage.setAttribute("src", image)
+
+        heartEmpty.classList.add("far", "fa-heart")
+        heartFull.classList.add("fas", "fa-heart")                                    
 
         cardName.textContent                = name 
         cardTown.textContent                = town
@@ -30,7 +34,8 @@ function restaurantFactory(data) {
         cardDescription.appendChild(cardDetails)
         cardDetails.appendChild(cardName)
         cardDetails.appendChild(cardTown)
-        cardDescription.appendChild(cardLike)
+        cardDescription.appendChild(heartEmpty)
+        cardDescription.appendChild(heartFull)
        
     }
     

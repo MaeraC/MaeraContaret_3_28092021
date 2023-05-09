@@ -18,23 +18,24 @@ fetch("../datas/restaurants.json")
             displayBanner(restaurant)
             displayTitleMenu(restaurant)
 
-            const products = restaurant.products 
-            const menuSection = document.querySelector(".menu")
-            const menuContainer = document.createElement("div")
+            const products                  = restaurant.products 
+            const menuSection               = document.querySelector(".menu")
+            const menuContainer             = document.createElement("div")
 
             // Implémentation de chaque produit dans le DOM
             products.forEach((product) => {
                 
-                const productContainer = document.createElement("div")
+                const productContainer      = document.createElement("div")
+
                 productContainer.classList.add("bloc__container")
                 menuContainer.classList.add("menu-container")
 
-                productContainer.innerHTML = `
+                productContainer.innerHTML  = `
                     <div class="bloc__container__card column animation">
                         <h4 class="bloc__container__card__title">${product.name}</h4>
                         <div class="bloc__container__card__description">
                             <p class="details">${product.description}</p>
-                            <span class="price">${product.price}<span>
+                            <span class="price">${product.price}€<span>
                         </div>
                     </div>
                     <div class="bloc__container__icone">
@@ -53,13 +54,13 @@ fetch("../datas/restaurants.json")
                 menuSection.appendChild(menuContainer)
                 menuContainer.appendChild(productContainer)
 
-                const addToCartBtn = productContainer.querySelector(".add-to-cart-btn")
-                const quantitySelect = productContainer.querySelector(".quantity")
+                const addToCartBtn          = productContainer.querySelector(".add-to-cart-btn")
+                const quantitySelect        = productContainer.querySelector(".quantity")
 
                 // Ajoute le nom du produit et la quantité dans la panier
                 addToCartBtn.addEventListener("click", (e) => {
-                    const productName = e.currentTarget.getAttribute("data-name")
-                    const quantity = parseInt(quantitySelect.value)
+                    const productName       = e.currentTarget.getAttribute("data-name")
+                    const quantity          = parseInt(quantitySelect.value)
                     addToCart(productName, quantity)
                     console.log(quantity)
                 })
@@ -68,7 +69,7 @@ fetch("../datas/restaurants.json")
             function addToCart(productName, quantity) {
 
                 // Recherche le produit correspondant au nom du produit dans le tableau `products`
-                const product = products.find(product => product.name === productName);
+                const product               = products.find(product => product.name === productName);
                 
                 if (!product) {
                   console.error(`Le produit avec le nom ${productName} n'existe pas.`)
@@ -82,7 +83,7 @@ fetch("../datas/restaurants.json")
                 }
 
                 // Recherche si le produit est déjà présent dans le panier
-                const existingProduct = cart.find(item => item.product.name === productName);
+                const existingProduct       = cart.find(item => item.product.name === productName);
                 
                 if (existingProduct) {
                   // Si le produit existe déjà dans le panier, on ajoute simplement la quantité

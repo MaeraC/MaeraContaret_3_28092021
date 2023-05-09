@@ -1,36 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 
-/* ANIMATION LOADER ********************************************************************************
-*****************************************************************************************************/
-
-@keyframes container {
-  0% {
-    visibility: visible;
-    opacity: 0.9;
-  }
-  50% {
-    opacity: 0.9;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-    visibility: visible;
-  }
-  50% {
-    transform: rotate(360deg);
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-    transform: rotate(0deg);
-  }
-}
-
 /*ANIMATION MENU ***************************************************************************************
 *********************************************************************************************************/
 
@@ -43,7 +12,7 @@
   }
 }
 
-/*PAGE INDEX *************************************************************************************
+/* *************************************************************************************
 ****************************************************************************************************/
 body {
   font-family: "Roboto", sans-serif;
@@ -53,34 +22,8 @@ a {
   text-decoration: none;
   color: black;
 }
-.container-loader {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  position: fixed;
-  z-index: 2;
-  background: white;
-  visibility: hidden;
-  animation: container 2s linear;
-}
-.container-loader .loader {
-  width: 60px;
-  height: 60px;
-  border: 10px solid #9356DC;
-  border-top: 10px solid #FF79DA;
-  border-bottom: 10px solid #99E2D0;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  animation: loader 2s linear;
-}
-
+/*HEADER PAGES *************************************************************************************
+****************************************************************************************************/
 .header-menu {
   position: relative;
   text-align: center;
@@ -105,10 +48,64 @@ a {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+.header-banner {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+/*SEARCH BAR *************************************************************************************
+****************************************************************************************************/
 
+.location {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.search-bar {
+  border: none;
+  height: 30px;
+  background-color: white;
+  border: solid 1px rgb(201, 200, 200);
+  padding: 0 10px;
+  text-align: center;
+  outline: none;
+  width: 250px;
+}
+.bar-results {
+  background: white;
+  border: rgb(201, 200, 200) solid 1px;
+  width: 250px;
+  position: absolute;
+  top: 30px;
+  padding: 0 10px;
+  font-size: 14px;
+  display: none;
+}
+.presentation-button {
+  height: 30px;
+  padding: 0 20px;
+  background: linear-gradient(-5deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: #d4d1d1 1px 3px 6px 3px;
+  color: white;
+  font-size: 14px;
+  line-height: 28px;
+  font-family: "Roboto", sans-serif;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: none;
+  transition: 0.5s;
+}
+.presentation-button:hover {
+  box-shadow: #525050 1px 3px 6px 1px;
+  cursor: pointer;
+}
+/*SECTION PRESENTATION *************************************************************************************
+****************************************************************************************************/
 .presentation {
   text-align: center;
-  background-color: #f8f6f6;
+  background-color: #f3f3f3;
   padding-top: 20px;
   padding-bottom: 40px;
 }
@@ -120,14 +117,15 @@ a {
   font-size: 18px;
   color: #525050;
 }
-
+/*SECTION FUNCTIONNING *************************************************************************************
+****************************************************************************************************/
 .functionning_container {
-  padding-left: 0;
+  display: flex;
+  justify-content: center;
 }
 .functionning__element {
   display: flex;
-  margin: 20px 0;
-  margin-top: 30px;
+  margin: 30px;
 }
 .functionning__element span {
   font-weight: normal;
@@ -152,7 +150,6 @@ a {
   font-weight: bold;
   font-size: 15px;
 }
-
 .functionning-details i {
   padding: 0 10px;
   padding-left: 20px;
@@ -162,9 +159,10 @@ a {
 .functionning-details:hover > i {
   color: #9356DC;
 }
-
+/*SECTION RESTAURANTS *************************************************************************************
+****************************************************************************************************/
 .restaurants {
-  background-color: #f8f6f6;
+  background-color: #f3f3f3;
   padding-top: 30px;
 }
 .rest-title {
@@ -191,7 +189,6 @@ a {
   box-shadow: #d4d1d1 3px 4px 9px 2px;
   margin: 20px;
 }
-
 .rest-container .restaurant-card .restaurant-card-image .new {
   position: absolute;
   top: 10px;
@@ -255,103 +252,55 @@ a {
   -webkit-background-clip: text;
   opacity: 1;
 }
-
-.footer {
-  padding: 20px;
-  font-size: 15px;
-  background-color: #3b3a3a;
-  color: white;
-  margin-bottom: 0;
-}
-.footer__title {
-  font-family: "Shrikhand", cursive;
-  font-size: 18px;
-  margin: 0;
-}
-.footer__bloc {
-  display: flex;
-  margin: 15px 0;
-}
-.footer__bloc .Icone1 {
-  margin-right: 13px;
-}
-.footer__bloc .Icone2 {
-  margin-right: 8px;
-}
-.footer__mention, .footer__contact {
-  margin: 10px 25px;
-  list-style: none;
-}
-.footer a {
-  color: white;
-  text-decoration: none;
-}
-.footer .footer__container span:hover, .footer a:hover {
-  color: #9356DC;
-  cursor: pointer;
-}
-.footer__container {
-  padding: 0;
-}
-
-/*PAGES MENUS ***************************************************************************************
-*****************************************************************************************************/
-
-.header-banner {
-  width: 100%;
-  height: 30vh;
-  object-fit: cover;
-}
+/*SECTION MENU *************************************************************************************
+****************************************************************************************************/
 .menu {
-  background-color: #f8f6f6;
-  position: relative;
+  background-color: #f3f3f3;
   padding-bottom: 20px;
 }
 .title-container {
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  background-color: #f8f6f6;
-  position: absolute;
-  width: 100%;
-  top: -90px;
+  margin-bottom: 30px;
 }
 .title-container h2 {
   font-family: "Shrikhand", cursive;
   font-size: 24px;
-  padding-top: 5px;
-  margin-bottom: 36px;
-  margin: auto;
+}
+.heart-container {
   margin-left: 20px;
+  position: relative;
 }
-.title-container__icone .far {
-  font-size: 22px;
+.fa-heart {
+  font-size: 25px;
   padding: 35px;
+  padding: 0;
+  margin: 0;
 }
-
-.menu__button {
-  text-align: center;
-  margin: 40px 0;
+.full-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 91;
+  color: transparent;
+  transition: all 0.5s;
+  opacity: 0;
 }
-.menu__button button {
-  width: 170px;
-  height: 50px;
-  padding: 0 20px;
-  background: linear-gradient(-5deg, #9356DC 0%, #FF79DA 100%);
-  box-shadow: #d4d1d1 1px 3px 6px 3px;
-  color: white;
-  font-size: 15px;
-  font-family: "Roboto", sans-serif;
-  border-radius: 30px;
-  border: none;
+.full-heart:hover {
   transition: 0.5s;
-}
-.menu__button :hover {
-  background: linear-gradient(-5deg, #a16be0 0%, #ff93e1 100%);
-  box-shadow: #525050 1px 3px 6px 1px;
+  background-image: linear-gradient(-5deg, #FF79DA 50%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
   cursor: pointer;
 }
 
+/*CARD MENU *************************************************************************************
+****************************************************************************************************/
 .bloc__title {
   margin-top: 60px;
   margin-left: 20px;
@@ -389,7 +338,7 @@ a {
   border-radius: 12px;
   overflow: hidden;
   background-color: white;
-  box-shadow: 3px 3px 12px #ece9e9;
+  box-shadow: #d4d1d1 3px 4px 9px 2px;
   margin: 20px;
   cursor: pointer;
   display: flex;
@@ -436,9 +385,12 @@ a {
   margin-right: 20px;
 }
 .btn-plus {
-  background-color: #99E2D0;
+  background: linear-gradient(-5deg, #a16be0 0%, #ff93e1 100%);
   border: none;
   cursor: pointer;
+}
+.btn-plus:hover {
+  background: #99E2D0;
 }
 .quantity {
   display: none;
@@ -455,17 +407,16 @@ a {
   justify-content: center;
   line-height: 30px;
 }
-
 .column {
   display: flex;
   flex-direction: column;
 }
-
 .animation {
   animation: opacity-menu 1s linear;
   -webkit-animation: opacity-menu 1s linear;
 }
-
+/*PANIER *************************************************************************************
+****************************************************************************************************/
 .fa-shopping-cart {
   position: absolute;
   top: 20px;
@@ -474,36 +425,52 @@ a {
   color: black;
   cursor: pointer;
 }
+.fa-shopping-cart:hover {
+  transform: scale(1.07);
+  transition: 0.3s;
+}
 .cart-container {
   width: 400px;
   background-color: white;
-  position: absolute;
-  top: 350%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: none;
   z-index: 999;
-  border-radius: 30px;
-  padding: 0 20px;
+  border-radius: 10px;
+  box-shadow: #d4d1d1 3px 4px 9px 2px;
+  position: absolute;
+  right: 10px;
+}
+.cart-container h4 {
+  font-size: 20px;
+  border-bottom: rgb(203, 203, 203) solid 1px;
+  margin: 0;
+  padding: 10px 0;
 }
 #cart {
   list-style: none;
   padding-inline-start: 0px;
+  padding: 10px 20px;
+  padding-bottom: 0;
 }
 #cart li {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
   align-items: center;
+  margin-bottom: 30px;
+}
+.description-nd p {
+  margin: 0;
+  font-size: 14px;
+}
+.description-nd {
+  width: 70%;
+  text-align: left;
 }
 .namecart {
-  width: 70%;
-  background-color: red;
-  text-align: left;
+  font-weight: bold;
 }
 .pricecart {
   width: 25%;
-  font-weight: bold;
+  font-weight: bolder;
 }
 .fa-times {
   position: absolute;
@@ -512,143 +479,78 @@ a {
   cursor: pointer;
   font-size: 20px;
 }
+.fa-times:hover {
+  transform: scale(1.1);
+}
 .remove-btn {
   color: white;
-  font-size: 18px;
-  background-color: #99E2D0;
+  font-size: 15px;
+  background: linear-gradient(-5deg, #a16be0 0%, #ff93e1 100%);
   border: none;
   padding: 3px 6px;
   cursor: pointer;
+  transition: 0.3s;
 }
-
-/* MEDIA QUERIES *****************************************************************************************
-**********************************************************************************************************/
-
-@media only screen and (min-width: 500px) {
-  h2, footer {
-    text-align: center;
-  }
-
-  .footer__bloc {
-    justify-content: center;
-  }
-
-  .logo2 {
-    margin: auto;
-    margin-left: 80px;
-  }
-
-  
+.remove-btn:hover {
+  box-shadow: #9b9b9b 1px 3px 6px 1px;
 }
-@media only screen and (min-width: 700px) {
-  .functioning {
-    margin: 0 100px;
-  }
-
-  .restaurant-card-image {
-    width: 100%;
-  }
-
-  .title-container {
-    justify-content: center;
-  }
-  .title-container h2 {
-    margin: 23px;
-  }
-  .title-container__icone {
-    position: relative;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .functioning {
-    margin: 0;
-  }
-
-  .functionning_container {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .functionning-details div {
-    margin-right: 20px;
-  }
-
-  /*
-  .rest-container {
-    width: 60%;
-    margin: auto;
-  }*/
-
-  .menu__container {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .title-container {
-    position: initial;
-    justify-content: center;
-  }
-  .title-container h2 {
-    margin: 0;
-    padding: 30px 0;
-  }
-
-  .bloc__title {
-    margin-top: 30px;
-  }
-
-  .bloc {
-    width: 30%;
-  }
-}
-
-/*SEARCH BAR */
-.location {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-.search-bar {
-  border: none;
-  height: 30px;
-  background-color: white;
-  border: solid 1px rgb(201, 200, 200);
-  padding: 0 10px;
-  text-align: center;
-  outline: none;
-  width: 250px;
-}
-.bar-results {
-  background: white;
-  border: rgb(201, 200, 200) solid 1px;
-  width: 250px;
-  position: absolute;
-  top: 30px;
-  padding: 0 10px;
-  font-size: 14px;
-  display: none;
-}
-.presentation-button {
-  height: 30px;
+.total-price {
+  height: 40px;
+  width: 80%;
   padding: 0 20px;
+  font-size: 16px;
   background: linear-gradient(-5deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: #d4d1d1 1px 3px 6px 3px;
   color: white;
-  font-size: 14px;
-  line-height: 28px;
   font-family: "Roboto", sans-serif;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 30px;
   border: none;
-  transition: 0.5s;
+  margin-bottom: 20px;
+  transition: 0.3s;
 }
-.presentation-button:hover {
-  background: linear-gradient(-5deg, #a16be0 0%, #ff93e1 100%);
+.total-price:hover {
   box-shadow: #525050 1px 3px 6px 1px;
   cursor: pointer;
 }
-
-
-
+/*FOOTER *************************************************************************************
+****************************************************************************************************/
+.footer {
+  padding: 20px;
+  font-size: 15px;
+  background-color: #3b3a3a;
+  color: white;
+  margin-bottom: 0;
+  text-align: center;
+}
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  margin: 0;
+}
+.footer__bloc {
+  display: flex;
+  margin: 15px 0;
+  text-align: center;
+  justify-content: center;
+}
+.footer__bloc .Icone1 {
+  margin-right: 13px;
+}
+.footer__bloc .Icone2 {
+  margin-right: 8px;
+}
+.footer__mention, .footer__contact {
+  margin: 10px 25px;
+  list-style: none;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.footer .footer__container span:hover, .footer a:hover {
+  color: #9356DC;
+  cursor: pointer;
+}
+.footer__container {
+  padding: 0;
+}
