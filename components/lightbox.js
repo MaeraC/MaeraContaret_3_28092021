@@ -78,7 +78,9 @@ function lightbox(product) {
                 checkIcon.style.display = "block"
 
                 localStorage.setItem('cart', JSON.stringify(cart))
+                localStorage.setItem('cartNotif', JSON.stringify(cartNotif))
                 displayCart()
+                updateCartNotification()
                 
               })
 
