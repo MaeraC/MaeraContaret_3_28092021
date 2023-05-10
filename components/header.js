@@ -13,7 +13,9 @@ const cartContainer               = document.createElement('div')
 const cartTitle                   = document.createElement('h4')
 const cartList                    = document.createElement('ul')
 const totalPrice                  = document.createElement('button')
+const iconsContainer              = document.createElement("div")
 const closeIcon                   = document.createElement('i')
+const favoritesIcon               = document.createElement("i")
 
 cartTitle.textContent             = 'Mon panier'
 totalPrice.innerHTML              = 'COMMANDER : <span id="total"></span> €'
@@ -21,14 +23,9 @@ totalPrice.innerHTML              = 'COMMANDER : <span id="total"></span> €'
 closeIcon.classList.add('fas', 'fa-times')
 cartContainer.classList.add('cart-container')
 totalPrice.classList.add("total-price")
+favoritesIcon.classList.add("fas", "fa-heart")
+iconsContainer.classList.add("icons-container")
 cartList.setAttribute('id', 'cart')
-
-
-cartContainer.appendChild(cartTitle)
-cartContainer.appendChild(cartList)
-cartContainer.appendChild(totalPrice)
-cartContainer.appendChild(closeIcon)
-header.appendChild(cartContainer)
 
 logo.setAttribute("href", "../index.html")
 logoImg.setAttribute("src", "../images/ohmyfood.png")
@@ -46,6 +43,14 @@ logo.appendChild(logoImg)
 header.appendChild(cartIcon)
 header.appendChild(previousPage)
 previousPage.appendChild(previousIcon)
+header.appendChild(iconsContainer)
+iconsContainer.appendChild(favoritesIcon)
+iconsContainer.appendChild(cartIcon)
+cartContainer.appendChild(cartTitle)
+cartContainer.appendChild(cartList)
+cartContainer.appendChild(totalPrice)
+cartContainer.appendChild(closeIcon)
+header.appendChild(cartContainer)
 header.appendChild(cartNotif)
 
 

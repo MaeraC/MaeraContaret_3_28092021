@@ -186,54 +186,72 @@
         "products": [
             {
                 "name": "Tartare de poulpe acidulé",
+                "image": "../images/lightbox/tartarepoulpe.jpg",
+                "ingredients": "Poulpe, orange, muscade et feuilles de ciboulette.",
                 "description": "Aux zetes d'orange",
                 "price": 25,
                 "id": 20
             },
             {
                 "name": "Velouté de légumes d'antan",
-                "description": "Carotte, panais, topinambour",
+                "image": "../images/lightbox/veloute.jpg",
+                "ingredients": "Pommes de terres, topinambours, navets, tomates, panais et carottes.",
+                "description": "Délicates saveurs d'antan",
                 "price": 35,
                 "id": 21
             },
             {
                 "name": "Soupe à l'oignon",
+                "image": "../images/lightbox/veloute.jpg",
+                "ingredients": "Pommes de terres, topinambours, navets, tomates et persil.",
                 "description": "Revisitée",
                 "price": 20,
                 "id": 22
             },
             {
                 "name": "Coquilles Saint-Jacques",
+                "image": "../images/lightbox/noix.jpg",
+                "ingredients": "Coquilles Saint-Jacques, panais, citron et notre sauce secrète.",
                 "description": "Accompagnées d'une purée d epanais",
                 "price": 40,
                 "id": 23
             },
             {
                 "name": "Magret de canard",
+                "image": "../images/lightbox/magret.jpg",
+                "ingredients": "Canard, pommes de terres, petits légumes et feuilles de laurier.",
                 "description": "Et parmentier de pommes de terre",
                 "price": 35,
                 "id": 24
             },
             {
                 "name": "Pigeonneau d'Ille-et-Villaine",
+                "image": "../images/lightbox/pigeonneau.jpg",
+                "ingredients": "Gnocchis, petits légumes, et notre sauce secrète.",
                 "description": "Sur son lit de gnocchis aux légumes",
                 "price": 44,
                 "id": 25
             },
             {
                 "name": "Pétales de violettes glacés",
+                "image": "../images/lightbox/violette.jpg",
+                "ingredients": "Violette, fruits rouges, noisettes et notre sauce secrète.",
                 "description": "Et purée de noisette",
                 "price": 18,
                 "id": 26
             },
             {
                 "name": "Fondant au chocolat",
+                "image": "../images/lightbox/fondant.jpg",
+                "ingredients": "Chocolat noir, cacao, fraises et noisettes.",
                 "description": "Revisité",
                 "price": 22,
                 "id": 27
             },
             {
                 "name": "Millefeuille croustillant",
+                "image": "../images/lightbox/millefeuille.jpg",
+                "ingredients": "Myrtilles, amandes, noisettes, et crème anglaise.",
                 "description": "Myrtilles et pâte d'amande",
                 "price": 23,
                 "id": 28

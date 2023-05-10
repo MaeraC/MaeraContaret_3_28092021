@@ -12,10 +12,14 @@ function restaurantFactory(data) {
         const heartEmpty                    = document.createElement("i")
         const heartFull                     = document.createElement("i")
 
-        card.setAttribute("href", `../pages/menu.html?id=${id}`)
         cardImage.setAttribute("src", image)
 
-        heartEmpty.classList.add("far", "fa-heart")
+        cardImage.addEventListener("click", () => {
+            window.location.href = `../pages/menu.html?id=${id}`
+            cardImage.style.cursor = "pointer"
+        })
+
+        heartEmpty.classList.add("far", "fa-heart", "heart-restaurant")
         heartFull.classList.add("fas", "fa-heart")                                    
 
         cardName.textContent                = name 
@@ -36,10 +40,10 @@ function restaurantFactory(data) {
         cardDetails.appendChild(cardTown)
         cardDescription.appendChild(heartEmpty)
         cardDescription.appendChild(heartFull)
-       
     }
     
     return { image, town, name, getRestaurantCard }
 }
+
 
     

@@ -83,14 +83,12 @@ function removeItemFromCart(item) {
 
 function updateCartNotification() {
   //Actualise les notifs dans le panier
+  let cartNotif                   = document.querySelector(".cart-notif")
   if (cart.length > 0) {
-    let cartNotif                 = document.querySelector(".cart-notif")
     cartNotif.textContent         = cart.length
-    cartNotif.style.display       = "block"
   }
   else {
-    let cartNotif                 = document.querySelector(".cart-notif")
-    cartNotif.style.display       = "none"
+    cartNotif.textContent         = "0"
   }
 }
 
