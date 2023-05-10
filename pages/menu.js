@@ -4,7 +4,7 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cartNotif = JSON.parse(localStorage.getItem('cartNotif'))
 let favoritesList = JSON.parse(localStorage.getItem('favoritesList'))
 
-fetch("../datas/restaurants.json")
+fetch("https://maerac.github.io/Ohmyfood/datas/restaurants.json")
 .then((res) => res.json())
 .then((data) => {
     restaurants = data
