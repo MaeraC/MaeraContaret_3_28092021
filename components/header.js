@@ -5,6 +5,30 @@ const headerMenu            = document.querySelector(".header-menu")
 const previousPage          = document.createElement("a")
 const previousIcon          = document.createElement("i")
 const cartIcon              = document.createElement("i")
+ 
+cartNotif                   = document.createElement("span")
+
+// Création des éléments HTML pour le panier
+const cartContainer               = document.createElement('div')
+const cartTitle                   = document.createElement('h4')
+const cartList                    = document.createElement('ul')
+const totalPrice                  = document.createElement('button')
+const closeIcon                   = document.createElement('i')
+
+cartTitle.textContent             = 'Mon panier'
+totalPrice.innerHTML              = 'COMMANDER : <span id="total"></span> €'
+
+closeIcon.classList.add('fas', 'fa-times')
+cartContainer.classList.add('cart-container')
+totalPrice.classList.add("total-price")
+cartList.setAttribute('id', 'cart')
+
+
+cartContainer.appendChild(cartTitle)
+cartContainer.appendChild(cartList)
+cartContainer.appendChild(totalPrice)
+cartContainer.appendChild(closeIcon)
+header.appendChild(cartContainer)
 
 logo.setAttribute("href", "../index.html")
 logoImg.setAttribute("src", "../images/ohmyfood.png")
@@ -15,12 +39,14 @@ logo.classList.add("logo")
 previousPage.classList.add("previous-page")
 previousIcon.classList.add("fas", "fa-arrow-left")
 cartIcon.classList.add("fa", "fa-shopping-cart")
+cartNotif.classList.add("cart-notif")
 
 header.appendChild(logo)
 logo.appendChild(logoImg)
 header.appendChild(cartIcon)
-headerMenu.appendChild(previousPage)
+header.appendChild(previousPage)
 previousPage.appendChild(previousIcon)
+header.appendChild(cartNotif)
 
 
 

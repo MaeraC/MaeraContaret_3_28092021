@@ -19,3 +19,6 @@ function getRestaurants() {
         restaurantModel.getRestaurantCard()
     })
 }
+
+const previousPageIcon = document.querySelector(".previous-page")
+previousPageIcon.style.display = "none"

@@ -1,18 +1,3 @@
-// Création des éléments HTML pour le panier
-const cartContainer               = document.createElement('div')
-const cartTitle                   = document.createElement('h4')
-const cartList                    = document.createElement('ul')
-const totalPrice                  = document.createElement('button')
-const closeIcon                   = document.createElement('i')
-
-cartTitle.textContent             = 'Mon panier'
-totalPrice.innerHTML              = 'COMMANDER : <span id="total"></span> €'
-
-closeIcon.classList.add('fas', 'fa-times')
-cartContainer.classList.add('cart-container')
-totalPrice.classList.add("total-price")
-cartList.setAttribute('id', 'cart')
-
 // Fermeture du panier
 closeIcon.addEventListener('click', () => {
   cartContainer.style.display     = 'none'
@@ -23,12 +8,6 @@ cartIcon.addEventListener('click', () => {
   displayCart();
   cartContainer.style.display     = 'block'
 });
-
-cartContainer.appendChild(cartTitle)
-cartContainer.appendChild(cartList)
-cartContainer.appendChild(totalPrice)
-cartContainer.appendChild(closeIcon)
-header.appendChild(cartContainer)
 
 // Affichage du panier
 function displayCart() {
@@ -62,6 +41,7 @@ function displayCart() {
     // Supprime les articles du panier
     removeBtn.addEventListener('click', () => {
       removeItemFromCart(item)
+      updateCartNotification()
       displayCart()
     });
 
@@ -81,7 +61,9 @@ function displayCart() {
 
 // Mise à jour du contenu du panier depuis le localStorage
 function loadCartFromLocalStorage() {
-  cart = JSON.parse(localStorage.getItem('cart')) || []
+  cart                            = JSON.parse(localStorage.getItem('cart')) || []
+  cartNotif                       = JSON.parse(localStorage.getItem('cartNotif'))
+  updateCartNotification()
   displayCart();
 }
 
@@ -95,8 +77,22 @@ function removeItemFromCart(item) {
       cart.splice(index, 1)
       // Mise à jour du localStorage avec le nouveau panier
       localStorage.setItem('cart', JSON.stringify(cart))
+      localStorage.setItem('cartNotif', JSON.stringify((cartNotif)))
     }
+}
+
+function updateCartNotification() {
+  //Actualise les notifs dans le panier
+  if (cart.length > 0) {
+    let cartNotif                 = document.querySelector(".cart-notif")
+    cartNotif.textContent         = cart.length
+    cartNotif.style.display       = "block"
   }
+  else {
+    let cartNotif                 = document.querySelector(".cart-notif")
+    cartNotif.style.display       = "none"
+  }
+}
 
 // Appel loadCartFromLocalStorage() lorsque la page est chargée
 window.addEventListener('load', loadCartFromLocalStorage)

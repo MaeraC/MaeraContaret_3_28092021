@@ -1,5 +1,7 @@
 let restaurants = []
+// Récupère les données de cart depuis le localestorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cartNotif = JSON.parse(localStorage.getItem('cartNotif'))
 
 fetch("../datas/restaurants.json")
 .then((res) => res.json())
@@ -99,10 +101,13 @@ fetch("../datas/restaurants.json")
                     quantity: quantity
                   })
                 }
-                // Stocker le panier dans le localStorage
-                localStorage.setItem('cart', JSON.stringify(cart))
-                console.log(cart)
 
+                // Stocke le panier dans le localStorage
+                localStorage.setItem('cart', JSON.stringify(cart))
+                localStorage.setItem('cartNotif', JSON.stringify(cartNotif))
+                //Actualise les notifs dans le panier
+                updateCartNotification()
+                // Actualise le panier 
                 displayCart()
             }
 
@@ -124,10 +129,12 @@ fetch("../datas/restaurants.json")
                     total.textContent = totalPrice;
                 }
 
-                 // Stocker le panier dans le localStorage
-                 localStorage.setItem('cart', JSON.stringify(cart))
-                 console.log(cart)
-
+                // Stocker le panier dans le localStorage
+                localStorage.setItem('cart', JSON.stringify(cart))
+                localStorage.setItem('cartNotif', JSON.stringify(cartNotif))
+                //Actualise les notifs dans le panier
+                updateCartNotification()
+                // Actualise le panier 
                 displayCart()
             }
         }
