@@ -18,8 +18,9 @@ cartIcon.classList.add("fa", "fa-shopping-cart")
 
 header.appendChild(logo)
 logo.appendChild(logoImg)
+header.appendChild(cartIcon)
 headerMenu.appendChild(previousPage)
 previousPage.appendChild(previousIcon)
-header.appendChild(cartIcon)
+
 
 

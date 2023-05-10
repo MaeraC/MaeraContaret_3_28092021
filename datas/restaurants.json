@@ -7,6 +7,8 @@
         "products": [
             {
                 "name": "Fricassée d'escargot",
+                "image": "../images/lightbox/fricasse.jpg",
+                "ingredients": "escargots, piment d'espelette, herbes jardinières et notre sauce secrète.",
                 "type": "entree",
                 "description": "Au piment d'espelette",
                 "price": 25,
@@ -14,6 +16,8 @@
             },
             {
                 "name": "Foie gras de canard mi-cuit",
+                "image": "../images/lightbox/foie-gras-canard.jpg",
+                "ingredients": "foie gras de canard, truffe noire, sauce à la betterave, feuilles de salade.",
                 "type": "entree",
                 "description": "Et ses copeaux de truffe noire",
                 "price": 35,
@@ -21,6 +25,8 @@
             },
             {
                 "name": "Oeuf au plat",
+                "image": "../images/lightbox/oeufauplat.jpg",
+                "ingredients": "Oeuf, truffe noire, caviar, tomates cerises, feuilles d'épinard.",
                 "type": "entree",
                 "description": "Assaisonné à la truffe sur lit de caviar",
                 "price": 20,
@@ -28,6 +34,8 @@
             },
             {
                 "name": "Filet de boeuf aux herbes",
+                "image": "../images/lightbox/filetdeboeuf.jpg",
+                "ingredients": "filet de boeuf, légumes de saison, pommes de terres et notre sauce secrète.",
                 "type": "dish",
                 "description": "Accompagné de sa ribambelle de légumes",
                 "price": 40
@@ -36,6 +44,8 @@
             },
             {
                 "name": "Parmentier de queue de boeuf",
+                "image": "../images/lightbox/parmentier.jpg",
+                "ingredients": "Boeuf hâché, panais, truffe noire et herbes de saison.",
                 "type": "dish",
                 "description": "A la truffe noire sur sa purée de panais",
                 "price": 35
@@ -44,6 +54,8 @@
             },
             {
                 "name": "Filet de turbo",
+                "image": "../images/lightbox/filetdeturbo.jpg",
+                "ingredients": "Filet de turbo, citron vert, pamplemouse, herbes d'Autriche et notre sauce secrète.",
                 "type": "dish",
                 "description": "Aux agrumes",
                 "price": 44,
@@ -51,6 +63,8 @@
             },
             {
                 "name": "Paris-Brest",
+                "image": "../images/lightbox/parisbrest.jpg",
+                "ingredients": "Fraises, crème patissière et pâte à choux",
                 "type": "dessert",
                 "description": "Revisité",
                 "price": 18,
@@ -58,6 +72,8 @@
             },
             {
                 "name": "Macaron au chocolat d'exception",
+                "image": "../images/lightbox/macaron.jpg",
+                "ingredients": "Chocolat, et pour le reste... C'est secret",
                 "type": "dessert",
                 "description": "Et glace à la vanille de Madagascar",
                 "price": 22,
@@ -65,6 +81,8 @@
             },
             {
                 "name": "Mousse au chocolat",
+                "image": "../images/lightbox/moussechocolat.jpg",
+                "ingredients": "Chocolat noir, cacao d'Afrique, crème anglaise et menthe.",
                 "type": "dessert",
                 "description": "Au piment d'espelette et à la truffe noire",
                 "price": 23,
@@ -80,60 +98,80 @@
         "products": [
             {
                 "name": "Ravioles de foie gras",
+                "image": "../images/lightbox/ravioles.jpg",
+                "ingredients": "Foie gras, truffe noire, et feuilles de menthe.",
                 "description": "Accompagnés de leur crème à la truffe",
                 "price": 25,
                 "id": 10
             },
             {
                 "name": "Caviar osciètre",
+                "image": "../images/lightbox/caviar.jpg",
+                "ingredients": "Caviar, blini et notre sauce secrète.",
                 "description": "Sur blini à la farine de blé noir",
                 "price": 35,
                 "id": 11
             },
             {
                 "name": "Homard et espuma de potiron",
+                "image": "../images/lightbox/homard.jpg",
+                "ingredients": "Homard, potiron, oranges, et persil.",
                 "description": "Mariné aux zestes d'orange",
                 "price": 20,
                 "id": 12
             },
             {
                 "name": "Foie gras de canard cuit entier",
+                "image": "../images/lightbox/foie-gras-canard.jpg",
+                "ingredients": "Foie gras, truffe noire, et feuilles de menthe.",
                 "description": "Confiture de figue et pain toasté",
                 "price": 35,
                 "id": 13
             },
             {
                 "name": "Macaron noisette et chocolat",
+                "image": "../images/lightbox/macaron.jpg",
+                "ingredients": "Chocolat noir, caramel, glace.",
                 "description": "Glace au  caramel brun et sel de Guérande",
                 "price": 18,
                 "id": 17
             },
             {
                 "name": "Baba au rhum revisité",
+                "image": "../images/lightbox/babaaurhum.jpg",
+                "ingredients": "Recette secrète et revisitée.",
                 "description": "Avec son coulis de citron",
                 "price": 22,
                 "id": 18
             },
             {
                 "name": "Tarte au citron meringuée",
+                "image": "../images/lightbox/tartecitron.jpg",
+                "ingredients": "Citron, crème patissière, meringue.",
                 "description": "Destructurée",
                 "price": 23,
                 "id": 19
             },
             {
                 "name": "Noix de coquilles Saint-Jacques",
+                "image": "../images/lightbox/noix.jpg",
+                "ingredients": "Coquilles Saint-Jacques, cèleri-rave et notre sauce secrète.",
                 "description": "Sur lit de purée de céleri-rave",
                 "price": 40,
                 "id": 14
             },
             {
                 "name": "Langoustine poêlée",
+                "image": "../images/lightbox/langoustine.jpg",
+                "ingredients": "Patate docue, langoustine et petits légumes.",
                 "description": "Purée de patate douce",
                 "price": 35,
                 "id": 15
             },
             {
                 "name": "Mijoté de queue de boeuf",
+                "image": "../images/lightbox/mijoteboeuf.jpg",
+                "ingredients": "Boeuf, riz, citron et petits légumes.",
                 "description": "Et riz sauvage aux zetes de citron",
                 "price": 44,
                 "id": 16

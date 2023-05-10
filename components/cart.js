@@ -43,17 +43,20 @@ function displayCart() {
     const containerND             = document.createElement("div")
     const name                    = document.createElement('span')
     const description             = document.createElement("p")
+    const quantity                = document.createElement("p")
     const price                   = document.createElement('span')
     const removeBtn               = document.createElement('button')
 
     name.textContent              = item.product.name
     description.textContent       = item.product.description
-    price.textContent             = item.product.price + ' €'
+    quantity.textContent          = "x" + item.quantity
+    price.textContent             = item.product.price + '€' 
     removeBtn.innerHTML           = '<i class="fas fa-trash"></i>'
 
     removeBtn.classList.add('remove-btn')
     name.classList.add('namecart')
     price.classList.add('pricecart')
+    quantity.classList.add('quantity-cart')
     containerND.classList.add('description-nd')
 
     // Supprime les articles du panier
@@ -65,13 +68,14 @@ function displayCart() {
     li.appendChild(containerND)
     containerND.appendChild(name)
     containerND.appendChild(description)
+    li.appendChild(quantity)
     li.appendChild(price)
     li.appendChild(removeBtn)
     cartList.appendChild(li)
   })
 
   // Calcul et affichage du prix total
-  const totalPrice                = cart.reduce((acc, item) => acc + item.product.price, 0)
+  const totalPrice                = cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0)
   total.textContent               = totalPrice
 }
 

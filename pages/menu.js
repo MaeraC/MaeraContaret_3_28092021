@@ -39,8 +39,8 @@ fetch("../datas/restaurants.json")
                         </div>
                     </div>
                     <div class="bloc__container__icone">
-                        <button class="btn-plus add-to-cart-btn" data-id="${product.id}" data-name="${product.name}" >
-                            <i class="fas fa-plus"></i>
+                        <button class="quantity-card" data-id="${product.id}" data-name="${product.name}" >
+                            <i class="fas fa-minus"></i>
                         </button>
                         <select id="quantity" name="q" class="quantity">
                             <option value="1">1</option>
@@ -49,6 +49,9 @@ fetch("../datas/restaurants.json")
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
+                        <button class="btn-plus add-to-cart-btn" data-id="${product.id}" data-name="${product.name}" >
+                            <i id="btn-plus" class="fas fa-plus"></i>
+                        </button>
                     </div>
                 `
                 menuSection.appendChild(menuContainer)
@@ -56,32 +59,33 @@ fetch("../datas/restaurants.json")
 
                 const addToCartBtn          = productContainer.querySelector(".add-to-cart-btn")
                 const quantitySelect        = productContainer.querySelector(".quantity")
-
+                const card                  = productContainer.querySelector(".bloc__container__card")
+                const removeQuantityBtn     = productContainer.querySelector(".quantity-card")
+                
                 // Ajoute le nom du produit et la quantité dans la panier
                 addToCartBtn.addEventListener("click", (e) => {
                     const productName       = e.currentTarget.getAttribute("data-name")
                     const quantity          = parseInt(quantitySelect.value)
                     addToCart(productName, quantity)
-                    console.log(quantity)
+                })
+
+                // Ouvre la lightbox en cliquant sur un produit 
+                card.addEventListener("click", () => {
+                    lightbox(product)
+                    const lightboxx         = document.querySelector(".lightbox")
+                    lightboxx.style.display = "block"
+                })
+
+                // Enlève -1 à la quantité d'un produit
+                removeQuantityBtn.addEventListener("click", (e) => {
+                    const productName       = e.currentTarget.getAttribute("data-name")
+                    removeProductQuantity(productName)
                 })
             })
 
             function addToCart(productName, quantity) {
-
                 // Recherche le produit correspondant au nom du produit dans le tableau `products`
                 const product               = products.find(product => product.name === productName);
-                
-                if (!product) {
-                  console.error(`Le produit avec le nom ${productName} n'existe pas.`)
-                  return;
-                }
-              
-                // Vérification de la quantité
-                if (isNaN(quantity) || quantity <= 0) {
-                    console.error(`La quantité doit être un nombre positif.`)
-                    return;
-                }
-
                 // Recherche si le produit est déjà présent dans le panier
                 const existingProduct       = cart.find(item => item.product.name === productName);
                 
@@ -95,16 +99,37 @@ fetch("../datas/restaurants.json")
                     quantity: quantity
                   })
                 }
-
                 // Stocker le panier dans le localStorage
                 localStorage.setItem('cart', JSON.stringify(cart))
-              
-                // Affichage du contenu du panier dans la console
-                //console.log(cart) 
-              
+                console.log(cart)
+
+                displayCart()
             }
-              
-            
+
+            function removeProductQuantity(productName) {
+                // Rechercher l'élément correspondant dans le panier
+                //const product = products.find(product => product.name === productName);
+                const existingProduct       = cart.find(item => item.product.name === productName);
+                
+                if (existingProduct) {
+                    // Réduire la quantité du produit de 1
+                    if (existingProduct.quantity > 1) {
+                        existingProduct.quantity -= 1;
+                    } else {
+                        // Si la quantité atteint 0, supprimer l'élément du panier
+                        cart.splice(cart.indexOf(existingProduct), 1);
+                    }
+                    // Mettre à jour l'affichage du prix total
+                    const totalPrice = cart.reduce((acc, item) => acc + (item.product.price * item.quantity), 0);
+                    total.textContent = totalPrice;
+                }
+
+                 // Stocker le panier dans le localStorage
+                 localStorage.setItem('cart', JSON.stringify(cart))
+                 console.log(cart)
+
+                displayCart()
+            }
         }
     })
 })
