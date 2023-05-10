@@ -20,6 +20,9 @@ const favoritesIcon               = document.createElement("i")
 cartTitle.textContent             = 'Mon panier'
 totalPrice.innerHTML              = 'COMMANDER : <span id="total"></span> €'
 
+totalPrice.addEventListener("click", () => {
+    modalOrderSection.style.display = "flex"
+})
 closeIcon.classList.add('fas', 'fa-times')
 cartContainer.classList.add('cart-container')
 totalPrice.classList.add("total-price")
