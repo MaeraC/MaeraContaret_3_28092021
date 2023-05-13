@@ -17,6 +17,7 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
+  background-color: red;
 }
 a {
   text-decoration: none;
@@ -144,7 +145,7 @@ a {
 }
 .presentation-title {
   font-size: 22px;
-  padding: 0 60px;
+  padding: 20px 60px;
 }
 .presentation-description {
   font-size: 18px;
@@ -244,6 +245,7 @@ a {
   height: 240px;
   position: relative;
   box-shadow: #d4d1d1 3px 4px 9px 2px;
+  cursor: pointer;
 }
 @media screen and (max-width:1024px) {
   .rest-container a {
@@ -454,9 +456,8 @@ a {
 }
 .bloc__container__card__description .price {
   position: absolute;
-  right: 10px;
+  right: 0px;
   top: -5px;
-  font-weight: bold;
 }
 @media screen and (max-width:480px)  {
   .bloc__container__icone {

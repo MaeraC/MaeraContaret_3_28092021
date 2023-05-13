@@ -12,7 +12,7 @@ searchBar.setAttribute("placeholder", "Sélectionnez le quartier de votre choix"
 presentationButton.setAttribute("href", "")
 
 presentationTitle.textContent           = "Réservez le menu qui vous convient"
-presentationDescription.textContent     = "Découvrez des restaurants d'exception, sélectionnés par nos soins."
+presentationDescription.textContent     = "Découvrez des restaurants d'exception dans tout Paris, sélectionnés par nos soins."
 presentationButton.textContent          = "Choisir un restaurant"
 
 presentationTitle.classList.add("presentation-title")
