@@ -15,12 +15,26 @@ function restaurantFactory(data) {
         cardImage.setAttribute("src", image)
 
         cardImage.addEventListener("click", () => {
-            window.location.href = `https://maerac.github.io/Ohmyfood/pages/menu.html?id=${id}`
+            window.location.href = `../pages/menu.html?id=${id}`
             cardImage.style.cursor = "pointer"
         })
 
-        heartEmpty.classList.add("far", "fa-heart", "heart-restaurant")
-        heartFull.classList.add("fas", "fa-heart")                                    
+        heartEmpty.classList.add("far", "fa-heart")
+        heartFull.classList.add("fas", "fa-heart")    
+        
+        heartEmpty.addEventListener("click", () => {
+            heartFull.classList.toggle("full-heart")
+            if (heartFull.classList.contains("full-heart")) {
+                console.log("yes")
+                heartEmpty.style.color = "transparent"
+            }
+            else {
+                console.log("no")
+                heartEmpty.style.color = "#525050"
+            }
+        })
+
+       
 
         cardName.textContent                = name 
         cardTown.textContent                = town

@@ -28,13 +28,12 @@ function lightbox(product) {
     productIngredients.classList.add("lightbox-ingredients")
     addButton.classList.add("add-button")
     head.classList.add("head")
-    closeIcon.classList.add("fas", "fa-times")
+    closeIcon.classList.add("fas", "fa-times", "close-lightbox")
     lightboxBg.classList.add("lightbox-bg")
     quantityBtn.classList.add("quantity-none")
 
     image.setAttribute("src", product.image)
     image.setAttribute("alt", product.name)
-    closeIcon.setAttribute("id", "close-lightbox")
     addButton.setAttribute("data-id", product.id)
     addButton.setAttribute("data-name", product.name)
     optionQuantity.setAttribute("value", "1")
@@ -44,7 +43,7 @@ function lightbox(product) {
         sectionLightbox.style.display = "none"
     })
 
-    fetch("https://maerac.github.io/Ohmyfood/datas/restaurants.json")
+    fetch("../datas/restaurants.json")
       .then(res => res.json())
       .then(data => {
           const restaurants                   = data

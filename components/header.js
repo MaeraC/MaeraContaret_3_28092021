@@ -23,17 +23,17 @@ totalPrice.innerHTML              = 'COMMANDER : <span id="total"></span> €'
 totalPrice.addEventListener("click", () => {
     modalOrderSection.style.display = "flex"
 })
-closeIcon.classList.add('fas', 'fa-times')
+closeIcon.classList.add('fas', 'fa-times', 'close-cart')
 cartContainer.classList.add('cart-container')
 totalPrice.classList.add("total-price")
 favoritesIcon.classList.add("fas", "fa-heart")
 iconsContainer.classList.add("icons-container")
 cartList.setAttribute('id', 'cart')
 
-logo.setAttribute("href", "https://maerac.github.io/Ohmyfood/index.html")
-logoImg.setAttribute("src", "https://maerac.github.io/Ohmyfood/images/ohmyfood.png")
+logo.setAttribute("href", "../index.html")
+logoImg.setAttribute("src", "../images/ohmyfood.png")
 logoImg.setAttribute("alt", "Logo Ohmyfood")
-previousPage.setAttribute("href", "https://maerac.github.io/Ohmyfood/index.html")
+previousPage.setAttribute("href", "../index.html")
 
 logo.classList.add("logo")
 previousPage.classList.add("previous-page")

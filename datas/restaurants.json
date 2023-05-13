@@ -3,11 +3,11 @@
         "name": "La Palette du Goût",
         "id": 1,
         "town": "Ménilmontant",
-        "image": "https://maerac.github.io/Ohmyfood/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg",
+        "image": "../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg",
         "products": [
             {
                 "name": "Fricassée d'escargot",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/fricasse.jpg",
+                "image": "../images/lightbox/fricasse.jpg",
                 "ingredients": "escargots, piment d'espelette, herbes jardinières et notre sauce secrète.",
                 "type": "entree",
                 "description": "Au piment d'espelette",
@@ -16,7 +16,7 @@
             },
             {
                 "name": "Foie gras de canard mi-cuit",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/foie-gras-canard.jpg",
+                "image": "../images/lightbox/foie-gras-canard.jpg",
                 "ingredients": "foie gras de canard, truffe noire, sauce à la betterave, feuilles de salade.",
                 "type": "entree",
                 "description": "Et ses copeaux de truffe noire",
@@ -25,7 +25,7 @@
             },
             {
                 "name": "Oeuf au plat",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/oeufauplat.jpg",
+                "image": "../images/lightbox/oeufauplat.jpg",
                 "ingredients": "Oeuf, truffe noire, caviar, tomates cerises, feuilles d'épinard.",
                 "type": "entree",
                 "description": "Assaisonné à la truffe sur lit de caviar",
@@ -34,7 +34,7 @@
             },
             {
                 "name": "Filet de boeuf aux herbes",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/filetdeboeuf.jpg",
+                "image": "../images/lightbox/filetdeboeuf.jpg",
                 "ingredients": "filet de boeuf, légumes de saison, pommes de terres et notre sauce secrète.",
                 "type": "dish",
                 "description": "Accompagné de sa ribambelle de légumes",
@@ -44,7 +44,7 @@
             },
             {
                 "name": "Parmentier de queue de boeuf",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/parmentier.jpg",
+                "image": "../images/lightbox/parmentier.jpg",
                 "ingredients": "Boeuf hâché, panais, truffe noire et herbes de saison.",
                 "type": "dish",
                 "description": "A la truffe noire sur sa purée de panais",
@@ -54,7 +54,7 @@
             },
             {
                 "name": "Filet de turbo",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/filetdeturbo.jpg",
+                "image": "../images/lightbox/filetdeturbo.jpg",
                 "ingredients": "Filet de turbo, citron vert, pamplemouse, herbes d'Autriche et notre sauce secrète.",
                 "type": "dish",
                 "description": "Aux agrumes",
@@ -63,7 +63,7 @@
             },
             {
                 "name": "Paris-Brest",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/parisbrest.jpg",
+                "image": "../images/lightbox/parisbrest.jpg",
                 "ingredients": "Fraises, crème patissière et pâte à choux",
                 "type": "dessert",
                 "description": "Revisité",
@@ -72,7 +72,7 @@
             },
             {
                 "name": "Macaron au chocolat d'exception",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/macaron.jpg",
+                "image": "../images/lightbox/macaron.jpg",
                 "ingredients": "Chocolat, et pour le reste... C'est secret",
                 "type": "dessert",
                 "description": "Et glace à la vanille de Madagascar",
@@ -81,7 +81,7 @@
             },
             {
                 "name": "Mousse au chocolat",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/moussechocolat.jpg",
+                "image": "../images/lightbox/moussechocolat.jpg",
                 "ingredients": "Chocolat noir, cacao d'Afrique, crème anglaise et menthe.",
                 "type": "dessert",
                 "description": "Au piment d'espelette et à la truffe noire",
@@ -94,11 +94,11 @@
         "name": "La Note Enchantée",
         "id": 2,
         "town": "Charonne",
-        "image": "https://maerac.github.io/Ohmyfood/images/stil-u2Lp8tXIcjw-unsplash.jpg",
+        "image": "../images/stil-u2Lp8tXIcjw-unsplash.jpg",
         "products": [
             {
                 "name": "Ravioles de foie gras",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/ravioles.jpg",
+                "image": "../images/lightbox/ravioles.jpg",
                 "ingredients": "Foie gras, truffe noire, et feuilles de menthe.",
                 "description": "Accompagnés de leur crème à la truffe",
                 "price": 25,
@@ -106,7 +106,7 @@
             },
             {
                 "name": "Caviar osciètre",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/caviar.jpg",
+                "image": "../images/lightbox/caviar.jpg",
                 "ingredients": "Caviar, blini et notre sauce secrète.",
                 "description": "Sur blini à la farine de blé noir",
                 "price": 35,
@@ -114,7 +114,7 @@
             },
             {
                 "name": "Homard et espuma de potiron",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/homard.jpg",
+                "image": "../images/lightbox/homard.jpg",
                 "ingredients": "Homard, potiron, oranges, et persil.",
                 "description": "Mariné aux zestes d'orange",
                 "price": 20,
@@ -122,7 +122,7 @@
             },
             {
                 "name": "Foie gras de canard cuit entier",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/foie-gras-canard.jpg",
+                "image": "../images/lightbox/foie-gras-canard.jpg",
                 "ingredients": "Foie gras, truffe noire, et feuilles de menthe.",
                 "description": "Confiture de figue et pain toasté",
                 "price": 35,
@@ -130,7 +130,7 @@
             },
             {
                 "name": "Macaron noisette et chocolat",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/macaron.jpg",
+                "image": "../images/lightbox/macaron.jpg",
                 "ingredients": "Chocolat noir, caramel, glace.",
                 "description": "Glace au  caramel brun et sel de Guérande",
                 "price": 18,
@@ -138,7 +138,7 @@
             },
             {
                 "name": "Baba au rhum revisité",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/babaaurhum.jpg",
+                "image": "../images/lightbox/babaaurhum.jpg",
                 "ingredients": "Recette secrète et revisitée.",
                 "description": "Avec son coulis de citron",
                 "price": 22,
@@ -146,7 +146,7 @@
             },
             {
                 "name": "Tarte au citron meringuée",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/tartecitron.jpg",
+                "image": "../images/lightbox/tartecitron.jpg",
                 "ingredients": "Citron, crème patissière, meringue.",
                 "description": "Destructurée",
                 "price": 23,
@@ -154,7 +154,7 @@
             },
             {
                 "name": "Noix de coquilles Saint-Jacques",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/noix.jpg",
+                "image": "../images/lightbox/noix.jpg",
                 "ingredients": "Coquilles Saint-Jacques, cèleri-rave et notre sauce secrète.",
                 "description": "Sur lit de purée de céleri-rave",
                 "price": 40,
@@ -162,7 +162,7 @@
             },
             {
                 "name": "Langoustine poêlée",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/langoustine.jpg",
+                "image": "../images/lightbox/langoustine.jpg",
                 "ingredients": "Patate docue, langoustine et petits légumes.",
                 "description": "Purée de patate douce",
                 "price": 35,
@@ -170,7 +170,7 @@
             },
             {
                 "name": "Mijoté de queue de boeuf",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/mijoteboeuf.jpg",
+                "image": "../images/lightbox/mijoteboeuf.jpg",
                 "ingredients": "Boeuf, riz, citron et petits légumes.",
                 "description": "Et riz sauvage aux zetes de citron",
                 "price": 44,
@@ -182,11 +182,11 @@
         "name": "À la Française",
         "id": 3,
         "town": "Cité Rouge",
-        "image": "https://maerac.github.io/Ohmyfood/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg",
+        "image": "../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg",
         "products": [
             {
                 "name": "Tartare de poulpe acidulé",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/tartarepoulpe.jpg",
+                "image": "../images/lightbox/tartarepoulpe.jpg",
                 "ingredients": "Poulpe, orange, muscade et feuilles de ciboulette.",
                 "description": "Aux zetes d'orange",
                 "price": 25,
@@ -194,7 +194,7 @@
             },
             {
                 "name": "Velouté de légumes d'antan",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/veloute.jpg",
+                "image": "../images/lightbox/veloute.jpg",
                 "ingredients": "Pommes de terres, topinambours, navets, tomates, panais et carottes.",
                 "description": "Délicates saveurs d'antan",
                 "price": 35,
@@ -202,7 +202,7 @@
             },
             {
                 "name": "Soupe à l'oignon",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/veloute.jpg",
+                "image": "../images/lightbox/veloute.jpg",
                 "ingredients": "Pommes de terres, topinambours, navets, tomates et persil.",
                 "description": "Revisitée",
                 "price": 20,
@@ -210,7 +210,7 @@
             },
             {
                 "name": "Coquilles Saint-Jacques",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/noix.jpg",
+                "image": "../images/lightbox/noix.jpg",
                 "ingredients": "Coquilles Saint-Jacques, panais, citron et notre sauce secrète.",
                 "description": "Accompagnées d'une purée d epanais",
                 "price": 40,
@@ -218,7 +218,7 @@
             },
             {
                 "name": "Magret de canard",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/magret.jpg",
+                "image": "../images/lightbox/magret.jpg",
                 "ingredients": "Canard, pommes de terres, petits légumes et feuilles de laurier.",
                 "description": "Et parmentier de pommes de terre",
                 "price": 35,
@@ -226,7 +226,7 @@
             },
             {
                 "name": "Pigeonneau d'Ille-et-Villaine",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/pigeonneau.jpg",
+                "image": "../images/lightbox/pigeonneau.jpg",
                 "ingredients": "Gnocchis, petits légumes, et notre sauce secrète.",
                 "description": "Sur son lit de gnocchis aux légumes",
                 "price": 44,
@@ -234,7 +234,7 @@
             },
             {
                 "name": "Pétales de violettes glacés",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/violette.jpg",
+                "image": "../images/lightbox/violette.jpg",
                 "ingredients": "Violette, fruits rouges, noisettes et notre sauce secrète.",
                 "description": "Et purée de noisette",
                 "price": 18,
@@ -242,7 +242,7 @@
             },
             {
                 "name": "Fondant au chocolat",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/fondant.jpg",
+                "image": "../images/lightbox/fondant.jpg",
                 "ingredients": "Chocolat noir, cacao, fraises et noisettes.",
                 "description": "Revisité",
                 "price": 22,
@@ -250,7 +250,7 @@
             },
             {
                 "name": "Millefeuille croustillant",
-                "image": "https://maerac.github.io/Ohmyfood/images/lightbox/millefeuille.jpg",
+                "image": "../images/lightbox/millefeuille.jpg",
                 "ingredients": "Myrtilles, amandes, noisettes, et crème anglaise.",
                 "description": "Myrtilles et pâte d'amande",
                 "price": 23,
@@ -262,58 +262,76 @@
         "name": "Le Délice des Sens",
         "id": 4,
         "town": "Folie-Méricourt",
-        "image": "https://maerac.github.io/Ohmyfood/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
+        "image": "../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
         "products": [
             {
                 "name": "Tartare de thon",
+                "image": "../images/lightbox/tartarethon.jpg",
+                "ingredients": "Yuzu, thon, oeuf, avocat et ciboulette.",
                 "description": "Assaisonné au yuzu",
                 "price": 25,
                 "id": 29
             },
             {
                 "name": "Bouchée de homard croustillant",
+                "image": "../images/lightbox/homard.jpg",
+                "ingredients": "homard, légumes du sud, herbes provencales et notre sauce secrète.",
                 "description": "Et sa farandole de petits légumes",
                 "price": 35,
                 "id": 30
             },
             {
                 "name": "Velouté de cèpes",
+                "image": "../images/lightbox/veloute.jpg",
+                "ingredients": "Cèpes, champignons de paris, truffes noires et crème légère.",
                 "description": "Aux truffes",
                 "price": 20,
                 "id": 31
             },
             {
                 "name": "Poulet rôti aux herbes de Provence",
+                "image": "../images/lightbox/pouletroti.jpg",
+                "ingredients": "Poulet, tomates cerises, maïs, herbes de provence et truffes noires.",
                 "description": "Et sa crème de truffe",
                 "price": 40,
                 "id": 32
             },
             {
                 "name": "Langouste rôtie",
+                "image": "../images/lightbox/langoustine.jpg",
+                "ingredients": "Langouste, tomates, poivrons, aubergines et notre sauce secrète.",
                 "description": "Et ses légumes de saison",
                 "price": 35,
                 "id": 33
             },
             {
                 "name": "Côte de boeuf Angus",
+                "image": "../images/lightbox/cotedeboeuf.jpg",
+                "ingredients": "Boeuf, panais, crème légère, herbes de saison et notre sauce secrète.",
                 "description": "Et sa purée de panais",
                 "price": 44,
                 "id": 34
             },
             {
                 "name": "Farandole de desserts",
-                "description": "Du chef",
+                "image": "../images/lightbox/desserts.jpg",
+                "ingredients": "Chocolat noir, framboises, myrtilles, meringue et crème patissière.",
+                "description": "Suprise du chef",
                 "price": 18,
                 "id": 35
             },
             {
                 "name": "Crème brûlée",
+                "image": "../images/lightbox/cremebrulee.jpg",
+                "ingredients": "Oeufs, framboises, myrtilles, fraises, caramel.",
                 "description": "Revisitée",
                 "price": 22,
                 "id": 36
             },
             {
                 "name": "Tiramisu",
+                "image": "../images/lightbox/tiramisu.jpg",
+                "ingredients": "Café, noisette, mascarpone, spéculos et poudre de cacao.",
                 "description": "A la noisette",
                 "price": 23,
                 "id": 37
@@ -325,58 +343,76 @@
         "name": "Le Jardin des Saveurs",
         "id": 5,
         "town": "Bastille",
-        "image": "https://maerac.github.io/Ohmyfood/images/bruschetta-au-saumon-mozzarella-au-concombre-oignon-rouge-tomate-sechee-citron-vert.jpg",
+        "image": "../images/bruschetta-au-saumon-mozzarella-au-concombre-oignon-rouge-tomate-sechee-citron-vert.jpg",
         "products": [
             {
                 "name": "Fricassée d'escargot",
+                "image": "../images/lightbox/fricasse.jpg",
+                "ingredients": "escargots, piment d'espelette, herbes jardinières et notre sauce secrète.",
                 "description": "Au piment d'espelette",
                 "price": 25,
                 "id": 38
             },
             {
                 "name": "Foie gras de canard mi-cuit",
+                "image": "../images/lightbox/foie-gras-canard.jpg",
+                "ingredients": "foie gras de canard, truffe noire, sauce à la betterave, feuilles de salade.",
                 "description": "Et ses copeaux de truffe noire",
                 "price": 35,
                 "id": 39
             },
             {
                 "name": "Oeuf au plat",
+                "image": "../images/lightbox/oeufauplat.jpg",
+                "ingredients": "Oeuf, truffe noire, caviar, tomates cerises, feuilles d'épinard.",
                 "description": "Assaisonné à la truffe sur lit de caviar",
                 "price": 20,
                 "id": 40
             },
             {
                 "name": "Poulet rôti aux herbes de Provence",
+                "image": "../images/lightbox/pouletroti.jpg",
+                "ingredients": "Poulet, tomates cerises, maïs, herbes de provence et truffes noires.",
                 "description": "Et sa crème de truffe",
                 "price": 40,
                 "id": 41
             },
             {
                 "name": "Langouste rôtie",
+                "image": "../images/lightbox/langoustine.jpg",
+                "ingredients": "Langouste, tomates, poivrons, aubergines et notre sauce secrète.",
                 "description": "Et ses légumes de saison",
                 "price": 35,
                 "id": 42
             },
             {
                 "name": "Côte de boeuf Angus",
+                "image": "../images/lightbox/cotedeboeuf.jpg",
+                "ingredients": "Boeuf, panais, crème légère, herbes de saison et notre sauce secrète.",
                 "description": "Et sa purée de panais",
                 "price": 44,
                 "id": 43
             },
             {
                 "name": "Farandole de desserts",
-                "description": "Du chef",
+                "image": "../images/lightbox/desserts.jpg",
+                "ingredients": "Chocolat noir, framboises, myrtilles, meringue et crème patissière.",
+                "description": "Surprise du chef",
                 "price": 18,
                 "id": 44
             },
             {
                 "name": "Crème brûlée",
+                "image": "../images/lightbox/cremebrulee.jpg",
+                "ingredients": "Oeufs, framboises, myrtilles, fraises, caramel.",
                 "description": "Revisitée",
                 "price": 22,
                 "id": 45
             },
             {
                 "name": "Tiramisu",
+                "image": "../images/lightbox/tiramisu.jpg",
+                "ingredients": "Café, noisette, mascarpone, spéculos et poudre de cacao.",
                 "description": "A la noisette",
                 "price": 23,
                 "id": 46
@@ -387,7 +423,7 @@
         "name": "La Symphonie des Papilles",
         "id": 7,
         "town": "Georges V",
-        "image": "https://maerac.github.io/Ohmyfood/images/petites-annonces-nourriture-haute-cuisine-salade-mangal-herbes-fraiches-verdure.jpg",
+        "image": "../images/petites-annonces-nourriture-haute-cuisine-salade-mangal-herbes-fraiches-verdure.jpg",
         "products": [
             {
                 "name": "Fricassée d'escargot",
@@ -449,7 +485,7 @@
         "name": "Le Palais des Délices",
         "id": 8,
         "town": "Saint Paul",
-        "image": "https://maerac.github.io/Ohmyfood/images/poisson-roti-servi-citrons-grenade-assiette-fromage.jpg",
+        "image": "../images/poisson-roti-servi-citrons-grenade-assiette-fromage.jpg",
         "products": [
             {
                 "name": "Fricassée d'escargot",
@@ -511,7 +547,7 @@
         "name": "L'Atelier du Chef",
         "id": 9,
         "town": "Nation",
-        "image": "https://maerac.github.io/Ohmyfood/images/salade-crevettes-frites-laitue-roquette-orange-tomate-noix-basilic-opale-noir.jpg",
+        "image": "../images/salade-crevettes-frites-laitue-roquette-orange-tomate-noix-basilic-opale-noir.jpg",
         "products": [
             {
                 "name": "Fricassée d'escargot",
@@ -573,7 +609,7 @@
         "name": "Le Clos des Vignes",
         "id": 10,
         "town": "République",
-        "image": "https://maerac.github.io/Ohmyfood/images/sandwiches-au-jambon-legumes.jpg",
+        "image": "../images/sandwiches-au-jambon-legumes.jpg",
         "products": [
             {
                 "name": "Fricassée d'escargot",
