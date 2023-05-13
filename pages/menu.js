@@ -1,23 +1,20 @@
-let restaurants = []
+let restaurants                             = []
 // Récupère les données de cart depuis le localestorage
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-let cartNotif = JSON.parse(localStorage.getItem('cartNotif'))
-let favoritesList = JSON.parse(localStorage.getItem('favoritesList'))
+let cart                                    = JSON.parse(localStorage.getItem('cart')) || [];
+let cartNotif                               = JSON.parse(localStorage.getItem('cartNotif'))
 
-fetch("https://maerac.github.io/Ohmyfood/datas/restaurants.json")
+fetch("../datas/restaurants.json")
 .then((res) => res.json())
 .then((data) => {
     restaurants = data
     
     restaurants.forEach((restaurant) => {
-        // Vérifie si l'url contient bien l'id du restaurant 
+        
         let verifyUrl = new URLSearchParams(window.location.search)
         verifyUrl.has(restaurant.id)
         let param = verifyUrl.get("id")
 
-        // Si l'id du restaurant correspond à l'id dans l'url
         if (restaurant.id == param) {
-            // Affiche la bannière et le titre du restaurant qui correspond 
             displayBanner(restaurant)
             displayTitleMenu(restaurant)
 
@@ -25,7 +22,6 @@ fetch("https://maerac.github.io/Ohmyfood/datas/restaurants.json")
             const menuSection               = document.querySelector(".menu")
             const menuContainer             = document.createElement("div")
 
-            // Implémentation de chaque produit dans le DOM
             products.forEach((product) => {
                 
                 const productContainer      = document.createElement("div")
@@ -34,27 +30,28 @@ fetch("https://maerac.github.io/Ohmyfood/datas/restaurants.json")
                 menuContainer.classList.add("menu-container")
 
                 productContainer.innerHTML  = `
+                    <span class="open-card">Cliquez pour voir le produit</span>
                     <div class="bloc__container__card column animation">
                         <h4 class="bloc__container__card__title">${product.name}</h4>
-                        <div class="bloc__container__card__description">
-                            <p class="details">${product.description}</p>
-                            <span class="price">${product.price}€<span>
-                        </div>
+                        <p class="details">${product.description}</p>
                     </div>
-                    <div class="bloc__container__icone">
-                        <button class="quantity-card" data-id="${product.id}" data-name="${product.name}" >
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <select id="quantity" name="q" class="quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <button class="btn-plus add-to-cart-btn" data-id="${product.id}" data-name="${product.name}" >
-                            <i id="btn-plus" class="fas fa-plus"></i>
-                        </button>
+                    <div class="bloc__price__icone">
+                        <p class="price">${product.price}€</p>
+                        <div class="bloc__container__icone">
+                            <button class="quantity-card btn-minus" data-id="${product.id}" data-name="${product.name}" >
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <select id="quantity" name="q" class="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button class="btn-plus add-to-cart-btn" data-id="${product.id}" data-name="${product.name}" >
+                                <i id="btn-plus" class="fas fa-plus"></i>
+                            </button>
+                        </div>
                     </div>
                 `
                 menuSection.appendChild(menuContainer)
@@ -64,25 +61,27 @@ fetch("https://maerac.github.io/Ohmyfood/datas/restaurants.json")
                 const quantitySelect        = productContainer.querySelector(".quantity")
                 const card                  = productContainer.querySelector(".bloc__container__card")
                 const removeQuantityBtn     = productContainer.querySelector(".quantity-card")
+                const openCardText          = productContainer.querySelector(".open-card")
                 
-                // Ajoute le nom du produit et la quantité dans la panier
                 addToCartBtn.addEventListener("click", (e) => {
                     const productName       = e.currentTarget.getAttribute("data-name")
                     const quantity          = parseInt(quantitySelect.value)
                     addToCart(productName, quantity)
                 })
-
-                // Ouvre la lightbox en cliquant sur un produit 
                 card.addEventListener("click", () => {
                     lightbox(product)
                     const lightboxx         = document.querySelector(".lightbox")
                     lightboxx.style.display = "block"
                 })
-
-                // Enlève -1 à la quantité d'un produit
                 removeQuantityBtn.addEventListener("click", (e) => {
                     const productName       = e.currentTarget.getAttribute("data-name")
                     removeProductQuantity(productName)
+                })
+                card.addEventListener("mouseover", () => {
+                    openCardText.style.display = "block"
+                })
+                card.addEventListener("mouseout", () => {
+                    openCardText.style.display = "none"
                 })
             })
 
