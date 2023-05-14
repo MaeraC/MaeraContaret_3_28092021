@@ -42,10 +42,10 @@ favoritesContainer.classList.add("favorites-container")
 cartNotif.classList.add("cart-notif")
 
 cartList.setAttribute('id', 'cart')
-logo.setAttribute("href", "../index.html")
-logoImg.setAttribute("src", "../images/ohmyfood.png")
+logo.setAttribute("href", "https://maerac.github.io/Ohmyfood/index.html")
+logoImg.setAttribute("src", "https://maerac.github.io/Ohmyfood/images/ohmyfood.png")
 logoImg.setAttribute("alt", "Logo Ohmyfood")
-previousPage.setAttribute("href", "../index.html")
+previousPage.setAttribute("href", "https://maerac.github.io/Ohmyfood/index.html")
 
 header.appendChild(logo)
 logo.appendChild(logoImg)

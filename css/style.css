@@ -619,7 +619,7 @@ a {
 /*FAVORIS *************************************************************************************
 ****************************************************************************************************/
 .favorites-container {
-  position: absolute;
+  position: relative;
   right: 10px;
   background-color: white;
   box-shadow: #b7b7b7 3px 3px 10px 1px;
@@ -745,7 +745,7 @@ a {
   box-shadow: #525050 1px 3px 6px 1px;
   cursor: pointer;
 }
-.close-lightbox {
+.close-lightbox , .close-favorites {
   position: absolute;
   top: 5px;
   right: 5px;

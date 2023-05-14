@@ -16,7 +16,7 @@ function restaurantFactory(data) {
         cardImage.setAttribute("src", image)
 
         cardImage.addEventListener("click", () => {
-            window.location.href = `../pages/menu.html?id=${id}`
+            window.location.href = `https://maerac.github.io/Ohmyfood/pages/menu.html?id=${id}`
             cardImage.style.cursor = "pointer"
         })
 
@@ -41,7 +41,14 @@ function restaurantFactory(data) {
         function displayFavorites() {
             const favoritesContainer = document.querySelector(".favorites-container");
             favoritesContainer.innerHTML = ""; // On vide le conteneur des favoris
-        
+            const closeFavorites = document.createElement("i")
+
+            closeFavorites.classList.add("fas", "fa-times", "close-favorites")
+
+            closeFavorites.addEventListener("click", () => {
+                favoritesContainer.style.display = "none"
+            })
+
             favorites.forEach((favorite) => {
                 const favCard = document.createElement("a");
                 const container = document.createElement("div")
@@ -49,7 +56,7 @@ function restaurantFactory(data) {
                 const favName = document.createElement("h3");
                 const favTown = document.createElement("span");
 
-                favCard.setAttribute("href", `../pages/menu.html?id=${id}`)
+                favCard.setAttribute("href", `https://maerac.github.io/Ohmyfood/pages/menu.html?id=${id}`)
             
                 favImg.setAttribute("src", favorite.image);
                 favName.textContent = favorite.name;
@@ -66,6 +73,7 @@ function restaurantFactory(data) {
                 container.appendChild(favTown);
             
                 favoritesContainer.appendChild(favCard);
+                favoritesContainer.appendChild(closeFavorites)
               });
           }
 
