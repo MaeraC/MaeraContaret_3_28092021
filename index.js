@@ -1,5 +1,6 @@
 let restaurants = []
 
+
 fetch("datas/restaurants.json")
 .then((res) =>res.json())
 .then((data) => {

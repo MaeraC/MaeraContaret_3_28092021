@@ -8,7 +8,6 @@ const cartIcon              = document.createElement("i")
  
 cartNotif                   = document.createElement("span")
 
-// Création des éléments HTML pour le panier
 const cartContainer               = document.createElement('div')
 const cartTitle                   = document.createElement('h4')
 const cartList                    = document.createElement('ul')
@@ -17,29 +16,36 @@ const iconsContainer              = document.createElement("div")
 const closeIcon                   = document.createElement('i')
 const favoritesIcon               = document.createElement("i")
 
+const favoritesContainer        = document.createElement("div")
+
 cartTitle.textContent             = 'Mon panier'
 totalPrice.innerHTML              = 'COMMANDER : <span id="total"></span> €'
 
 totalPrice.addEventListener("click", () => {
     modalOrderSection.style.display = "flex"
 })
+
+favoritesIcon.addEventListener("click", () => {
+    favoritesContainer.style.display = "block"
+})
+
 closeIcon.classList.add('fas', 'fa-times', 'close-cart')
 cartContainer.classList.add('cart-container')
 totalPrice.classList.add("total-price")
 favoritesIcon.classList.add("fas", "fa-heart")
 iconsContainer.classList.add("icons-container")
-cartList.setAttribute('id', 'cart')
-
-logo.setAttribute("href", "../index.html")
-logoImg.setAttribute("src", "../images/ohmyfood.png")
-logoImg.setAttribute("alt", "Logo Ohmyfood")
-previousPage.setAttribute("href", "../index.html")
-
 logo.classList.add("logo")
 previousPage.classList.add("previous-page")
 previousIcon.classList.add("fas", "fa-arrow-left")
 cartIcon.classList.add("fa", "fa-shopping-cart")
+favoritesContainer.classList.add("favorites-container")
 cartNotif.classList.add("cart-notif")
+
+cartList.setAttribute('id', 'cart')
+logo.setAttribute("href", "../index.html")
+logoImg.setAttribute("src", "../images/ohmyfood.png")
+logoImg.setAttribute("alt", "Logo Ohmyfood")
+previousPage.setAttribute("href", "../index.html")
 
 header.appendChild(logo)
 logo.appendChild(logoImg)
@@ -55,6 +61,7 @@ cartContainer.appendChild(totalPrice)
 cartContainer.appendChild(closeIcon)
 header.appendChild(cartContainer)
 header.appendChild(cartNotif)
+header.appendChild(favoritesContainer)
 
 
 

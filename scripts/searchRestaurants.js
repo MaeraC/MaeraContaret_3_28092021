@@ -4,16 +4,20 @@ function searchRestaurants() {
         const accents = "ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ";
         const noAccents = "AAAAAAaaaaaaOOOOOOooooooEEEEeeeeCcIIIIiiiiUUUUuuuuyNn";
         let newStr = "";
+
         for (let i = 0; i < str.length; i++) {
           let index = accents.indexOf(str[i]);
-          if (index !== -1) {
-            newStr += noAccents[index];
-          } else {
-            newStr += str[i];
-          }
+
+            if (index !== -1) {
+                newStr += noAccents[index];
+            } 
+            else {
+                newStr += str[i];
+            }
         }
+
         return newStr;
-      }
+    }
       
     const searchBar                     = document.querySelector(".search-bar")
     const barResults                    = document.querySelector(".bar-results")
@@ -34,6 +38,7 @@ function searchRestaurants() {
             // Affiche les restaurants qui correspondent au clic du quartier
             townNode.addEventListener("click", () => {
                 restaurantsContainer.innerHTML = "";
+                barResults.style.display = "none"
 
                 restaurants.forEach((restaurant) => {
                 if (restaurant.town.includes(townNode.textContent) === true) {
@@ -65,6 +70,8 @@ function searchRestaurants() {
             // Affichage des restaurants qui se trouve dans le quartier choisi
             townNode.addEventListener("click", () => {
                 restaurantsContainer.innerHTML = ""
+                barResults.style.display = "none"
+
                 restaurants.forEach((restaurant) => {
                     if (restaurant.town.includes(townNode.textContent) === true) {
                         const restaurantModel = restaurantFactory(restaurant)
@@ -74,7 +81,5 @@ function searchRestaurants() {
             })
         })
     })
-
-    
 }
 
