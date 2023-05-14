@@ -1,6 +1,6 @@
 let restaurants = []
 
-fetch("https://maerac.github.io/Ohmyfood/datas/restaurants.json")
+fetch("datas/restaurants.json")
 .then((res) =>res.json())
 .then((data) => {
     restaurants = data

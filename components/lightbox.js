@@ -43,7 +43,7 @@ function lightbox(product) {
         sectionLightbox.style.display = "none"
     })
 
-    fetch("https://maerac.github.io/Ohmyfood/datas/restaurants.json")
+    fetch("../datas/restaurants.json")
       .then(res => res.json())
       .then(data => {
           const restaurants                   = data

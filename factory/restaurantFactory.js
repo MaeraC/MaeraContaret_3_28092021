@@ -15,7 +15,7 @@ function restaurantFactory(data) {
         cardImage.setAttribute("src", image)
 
         cardImage.addEventListener("click", () => {
-            window.location.href = `https://maerac.github.io/Ohmyfood/pages/menu.html?id=${id}`
+            window.location.href = `../pages/menu.html?id=${id}`
             cardImage.style.cursor = "pointer"
         })
 

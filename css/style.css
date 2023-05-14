@@ -99,9 +99,9 @@ a {
   width: 250px;
   position: absolute;
   top: 30px;
-  padding: 0 10px;
+  z-index: 99;
   font-size: 14px;
-  display: none;
+  
 }
 .presentation-button {
   height: 30px;
@@ -120,6 +120,14 @@ a {
 .presentation-button:hover {
   box-shadow: #525050 1px 3px 6px 1px;
   cursor: pointer;
+}
+.town-node {
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.town-node:hover {
+  background-color: rgb(242, 242, 242);
 }
 @media screen and (max-width:768px) {
   .location {
