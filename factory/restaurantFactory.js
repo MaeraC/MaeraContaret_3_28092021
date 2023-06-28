@@ -37,49 +37,7 @@ function restaurantFactory(data) {
             localStorage.setItem("favorites", JSON.stringify(favorites));
             displayFavorites();
         })
-
-        function displayFavorites() {
-            const favoritesContainer = document.querySelector(".favorites-container");
-            favoritesContainer.innerHTML = ""; // On vide le conteneur des favoris
-            const closeFavorites = document.createElement("i")
-
-            closeFavorites.classList.add("fas", "fa-times", "close-favorites")
-
-            closeFavorites.addEventListener("click", () => {
-                favoritesContainer.style.display = "none"
-            })
-
-            favorites.forEach((favorite) => {
-                const favCard = document.createElement("a");
-                const container = document.createElement("div")
-                const favImg = document.createElement("img");
-                const favName = document.createElement("h3");
-                const favTown = document.createElement("span");
-
-                favCard.setAttribute("href", `https://maerac.github.io/Ohmyfood/pages/menu.html?id=${id}`)
-            
-                favImg.setAttribute("src", favorite.image);
-                favName.textContent = favorite.name;
-                favTown.textContent = favorite.town;
-            
-                favCard.classList.add("favorite-card");
-                favImg.classList.add("favorite-card-image");
-                favName.classList.add("favorite-name");
-                favTown.classList.add("favorite-town");
-            
-                favCard.appendChild(favImg);
-                favCard.appendChild(container);
-                container.appendChild(favName)
-                container.appendChild(favTown);
-            
-                favoritesContainer.appendChild(favCard);
-                favoritesContainer.appendChild(closeFavorites)
-              });
-          }
-
-          displayFavorites()
           
-
         cardName.textContent                = name 
         cardTown.textContent                = town 
 
